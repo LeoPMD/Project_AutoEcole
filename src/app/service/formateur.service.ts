@@ -33,7 +33,7 @@ export class FormateurService {
 
  getFormateurById(id: number): Observable<Formateur>
  {
-  return this.httpClient.get<Formateur>(environment.url + "getFormateur/" + id)
+  return this.httpClient.get<Formateur>(environment.url + "formateur/" + id)
  }
 
 }
