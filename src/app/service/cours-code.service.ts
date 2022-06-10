@@ -13,7 +13,30 @@ export class CoursCodeService {
 
   getAllCours():Observable<CoursCode[]>
   {
-    return this.httpClient.get<CoursCode[]>(environment.url + "CoursCode");
+    return this.httpClient.get<CoursCode[]>(environment.url + "CoursCode")
   }
   
+  ajoutCour(cours:CoursCode):Observable<CoursCode>
+  {
+   return this.httpClient.post<CoursCode>(environment.url + "saveCour", cours)
+  }
+
+  deleteCour(id:number):Observable<void>
+  {
+   return this.httpClient.delete<void>(environment.url + "deleteCour/" + id);
+  }
+
+  updateCour(cours:CoursCode):Observable<CoursCode>
+  {
+   return this.httpClient.put<CoursCode>(environment.url + "updateCour", cours)
+
+  }
+
+  getCoursById(id:number):Observable<CoursCode>
+  {
+   return this.httpClient.get<CoursCode>(environment.url + "CoursCode/" + id)
+
+  }
+
+
 }

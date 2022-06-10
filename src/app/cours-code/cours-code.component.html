@@ -12,10 +12,10 @@
       <tr *ngFor="let c of listeCours$ | async">
         <th scope="row">{{c.id}}</th>
         <td>{{c.titre}}</td>
-        <td><button >Modifier</button>
-           <button >Supprimer</button></td>
+        <td><button (click)="onUpdate(c.id)" >Modifier</button>
+           <button (click)="onDelete(c.id)" >Supprimer</button></td>
       </tr>
     </tbody>
   </table>
-  <button routerLink="/livres/addLivre"> Ajouter un cours </button>
+
   <router-outlet></router-outlet>

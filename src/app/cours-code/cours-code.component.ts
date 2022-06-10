@@ -11,12 +11,24 @@ import { CoursCodeService } from '../service/cours-code.service';
 })
 export class CoursCodeComponent implements OnInit {
 
-  listeCours$!: Observable<CoursCode[]>;
+  listeCours$!: Observable<CoursCode[]>
+  id!:number
 
-  constructor(private coursService:CoursCodeService, private router:Router, private activatedRoute: ActivatedRoute ) { }
+  constructor(private coursCodeService:CoursCodeService, private router:Router, private activatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
-    this.listeCours$=this.coursService.getAllCours()
+    this.listeCours$=this.coursCodeService.getAllCours()
   }
 
+  onDelete(id:number)
+  {
+    this.coursCodeService.deleteCour(id).subscribe();
+    this.router.navigateByUrl("/CoursCode")
+    window.location.reload()
+  }
+
+  onUpdate(id:number)
+  {
+    this.router.navigateByUrl("/updateCour/"+ id)
+  }
 }

@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
 import { CoursCodeComponent } from './cours-code/cours-code.component';
+import { FormulaireCourComponent } from './formulaire-cour/formulaire-cour.component';
+import { UpdateCourComponent } from './update-cour/update-cour.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculeComponent,
     ClientComponent,
-    CoursCodeComponent
+    CoursCodeComponent,
+    FormulaireCourComponent,
+    UpdateCourComponent
   ],
   imports: [
     BrowserModule,
