@@ -1,0 +1,27 @@
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Date de naissance</th>
+        <th scope="col">Email</th>
+        <th scope="col">Adresse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of listeFormateur$ | async">
+        <th scope="row">{{f.id}}</th>
+        <td>{{f.nom}}</td>
+        <td>{{f.prenom}}</td>
+        <td>{{f.dateNaissance}}</td>
+        <td>{{f.mail}}</td>
+        <td>{{f.adresse}}</td>
+        <td><button >Update</button></td>
+        <td><button >Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
