@@ -19,7 +19,7 @@
         <td>{{f.dateNaissance}}</td>
         <td>{{f.mail}}</td>
         <td>{{f.adresse}}</td>
-        <td><button type="button" class="btn btn-warning">Update</button></td>
+        <td><button type="button" class="btn btn-warning" (click)="onUpdate(f.id)">Update</button></td>
         <td><button type="button" class="btn btn-danger">Delete</button></td>
       </tr>
     </tbody>

@@ -1,3 +1,4 @@
+import { FormulaireModifierFormateurComponent } from './formulaire-modifier-formateur/formulaire-modifier-formateur.component';
 import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
 import { FormateurComponent } from './formateur/formateur.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path: "vehicule", component: VehiculeComponent},
   {path:"client", component:ClientComponent},
   {path: "formateur", component: FormateurComponent},
-  {path: "ajouterFormateur", component: FormulaireAddFormateurComponent}
+  {path: "ajouterFormateur", component: FormulaireAddFormateurComponent},
+  {path: "modifierFormateur/:id", component: FormulaireModifierFormateurComponent}
 ];
 
 

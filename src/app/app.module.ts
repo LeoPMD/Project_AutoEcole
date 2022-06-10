@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
 import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
+import { FormulaireModifierFormateurComponent } from './formulaire-modifier-formateur/formulaire-modifier-formateur.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/form
     VehiculeComponent,
     ClientComponent,
     FormateurComponent,
-    FormulaireAddFormateurComponent
+    FormulaireAddFormateurComponent,
+    FormulaireModifierFormateurComponent
   ],
   imports: [
     BrowserModule,

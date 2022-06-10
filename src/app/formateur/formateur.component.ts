@@ -20,4 +20,10 @@ export class FormateurComponent implements OnInit {
     this.listeFormateur$ = this.formateurService.getAllFormateur();
   }
 
+  onUpdate(id: number)
+  {
+    this.router.navigateByUrl("/modifierFormateur/" + id)
+
+  }
+
 }
