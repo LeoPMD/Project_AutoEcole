@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Marque</th>
+        <th scope="col">Plaque d'Immatriculation</th>
+        <th scope="col">Boite de Vitesse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of listeVehicules$ | async">
+        <th scope="row">{{v.id}}</th>
+        <td>{{v.marque}}</td>
+        <td>{{v.plaqueImmatriculation}}</td>
+        <td>{{v.boiteVitesse}}</td>
+      </tr>
+    </tbody>
+  </table>
