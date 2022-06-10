@@ -1,3 +1,4 @@
+import { FormateurComponent } from './formateur/formateur.component';
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { ClientComponent } from './client/client.component';
   declarations: [
     AppComponent,
     VehiculeComponent,
-    ClientComponent
+    ClientComponent,
+    FormateurComponent
   ],
   imports: [
     BrowserModule,
