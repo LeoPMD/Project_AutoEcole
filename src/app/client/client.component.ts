@@ -12,7 +12,7 @@ import { ClientService } from '../service/client.service';
 export class ClientComponent implements OnInit {
 
   constructor(private clientService:ClientService, private router:Router) {
-    router.routeReuseStrategy.shouldReuseRoute = () => false;
+
   }
 
   listeClient$!:Observable<Client[]>

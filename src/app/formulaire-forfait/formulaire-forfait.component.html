@@ -1,0 +1,21 @@
+<p>formulaire-forfait works!</p>
+
+<div>
+  <form [formGroup]="ForfaitForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom : </label>
+      <input type="text" class="form-control" id="nom" formControlName="nom">
+    </div>
+    <div class="mb-3">
+      <label for="montant" class="form-label">Montant : </label>
+      <input type="text" class="form-control" id="montant" formControlName="montant">
+    </div>
+    <div class="mb-3">
+      <label for="contenu" class="form-label">Contenu : </label>
+      <input type="text" class="form-control" id="contenu" formControlName="contenu">
+    </div>
+    <div>
+      <input type="submit" class="form-control" value="Envoyer">
+    </div>
+  </form>
+</div>

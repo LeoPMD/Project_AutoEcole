@@ -10,6 +10,9 @@ import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
+import { ForfaitComponent } from './forfait/forfait.component';
+import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
+import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { FormulaireClientComponent } from './formulaire-client/formulaire-client
     VehiculeComponent,
     ClientComponent,
     ModifierClientComponent,
-    FormulaireClientComponent
+    FormulaireClientComponent,
+    ForfaitComponent,
+    FormulaireForfaitComponent,
+    ModifierForfaitComponent
   ],
   imports: [
     BrowserModule,

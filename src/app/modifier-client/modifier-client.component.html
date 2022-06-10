@@ -2,7 +2,10 @@
 
 <div *ngIf="ClientForm">
   <form [formGroup]="ClientForm" (ngSubmit)="onUpdate()">
-    <input type="hidden" class="form-control" id="id" formControlName="id">
+    <div class="mb-3">
+      <label for="id" class="form-label">Identifiant : </label>
+      <input type="text" class="form-control" id="id" formControlName="id" [attr.disabled]="true">
+    </div>
     <div class="mb-3">
       <label for="nom" class="form-label">Nom : </label>
       <input type="text" class="form-control" id="nom" formControlName="nom">
