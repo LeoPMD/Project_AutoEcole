@@ -13,6 +13,8 @@
         <td>{{v.marque}}</td>
         <td>{{v.plaqueImmatriculation}}</td>
         <td>{{v.boiteVitesse}}</td>
+        <td><button (click)="onUpdate(v.id)" type="button" class="btn btn-outline-warning">Modifier</button>
+        <button (click)="onDelete(v.id)" class="btn btn-outline-danger">Supprimer</button></td>
       </tr>
     </tbody>
   </table>
