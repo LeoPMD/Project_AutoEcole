@@ -8,12 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
+import { ModifierClientComponent } from './modifier-client/modifier-client.component';
+import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculeComponent,
-    ClientComponent
+    ClientComponent,
+    ModifierClientComponent,
+    FormulaireClientComponent
   ],
   imports: [
     BrowserModule,

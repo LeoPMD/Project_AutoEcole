@@ -11,13 +11,31 @@ import { ClientService } from '../service/client.service';
 })
 export class ClientComponent implements OnInit {
 
-  constructor(private clientService:ClientService, private router:Router) { }
+  constructor(private clientService:ClientService, private router:Router) {
+    router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
 
   listeClient$!:Observable<Client[]>
 
 
   ngOnInit(): void {
     this.listeClient$ = this.clientService.getAllClient()
+  }
+
+  onSave()
+  {
+    this.router.navigateByUrl("/ajouterClient")
+  }
+
+  onDelete(id:number)
+  {
+    this.clientService.supprimerClient(id).subscribe()
+    this.router.navigate([this.router.url])
+  }
+
+  onUpdate(id:number)
+  {
+    this.router.navigateByUrl("/modifierClient/" + id)
   }
 
 }
