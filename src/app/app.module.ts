@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
+import { ClientComponent } from './client/client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VehiculeComponent
+    VehiculeComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,

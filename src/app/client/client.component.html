@@ -1,0 +1,33 @@
+<p>client works!</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Date de Naissance</th>
+      <th scope="col">Adresse mail</th>
+      <th scope="col">Adresse</th>
+      <!-- <th scope="col">Fonctionnalités</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of listeClient$ | async">
+      <th scope="row">{{client.id}}</th>
+      <td>{{client.nom}}</td>
+      <td>{{client.prenom}}</td>
+      <td>{{client.dateNaissance}}</td>
+      <td>{{client.mail}}</td>
+      <td>{{client.adresse}}</td>
+      <!-- <td>
+        <div class="btn-group" role="group"
+							aria-label="Basic mixed styles example">
+							<button class="btn btn-danger" (click)="onDelete(livre.id)">Supprimer</button>
+							<button class="btn btn-warning" (click)="onUpdate(livre.id)">Modifier</button>
+						</div>
+      </td> -->
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
