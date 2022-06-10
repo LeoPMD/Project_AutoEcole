@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
+import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehiculeComponent,
     ClientComponent,
-    FormateurComponent
+    FormateurComponent,
+    FormulaireAddFormateurComponent
   ],
   imports: [
     BrowserModule,

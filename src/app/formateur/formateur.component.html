@@ -19,9 +19,13 @@
         <td>{{f.dateNaissance}}</td>
         <td>{{f.mail}}</td>
         <td>{{f.adresse}}</td>
-        <td><button >Update</button></td>
-        <td><button >Delete</button></td>
+        <td><button type="button" class="btn btn-warning">Update</button></td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
       </tr>
     </tbody>
   </table>
+  <br>
+  <button type="button" class="btn btn-info" routerLink="/ajouterFormateur">Ajouter Formateur</button>
 </div>
+
+<router-outlet></router-outlet>

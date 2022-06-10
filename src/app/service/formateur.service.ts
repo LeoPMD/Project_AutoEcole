@@ -18,7 +18,7 @@ export class FormateurService {
 
   ajouterFormateur(formateur: Formateur): Observable<Formateur>
   {
-    return this.httpClient.post<Formateur>(environment.url + "saveFormateur", formateur)
+    return this.httpClient.post<Formateur>(environment.url + "ajouterFormateur", formateur)
   }
 
   deleteFormateur(id:number):Observable<void>
