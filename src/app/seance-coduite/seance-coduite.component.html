@@ -1,0 +1,31 @@
+<p>seance-coduite works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id : </th>
+        <th scope="col">Date de la séance </th>
+        <th scope="col">Heure début</th>
+        <th scope="col">Heure fin</th>
+        <th scope="col">Vehicule</th>
+        <th scope="col">Client</th>
+        <th scope="col">Formateur</th>
+        <th scope="col">Modifier/Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lc of listeSeances$ | async">
+        <th scope="row">{{lc.id}}</th>
+        <td>{{lc.dateSeance}}</td>
+        <td>{{lc.heureDebutSeance}}</td>
+        <td>{{lc.heureFinSeance}}</td>
+        <td>{{lc.vehicule}}</td>
+        <td>{{lc.client}}</td>
+        <td>{{lc.formateur}}</td>
+        <td><button  >Modifier</button>
+           <button >Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <router-outlet></router-outlet>

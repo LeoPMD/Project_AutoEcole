@@ -5,13 +5,15 @@ import { ClientComponent } from './client/client.component';
 import { CoursCodeComponent } from './cours-code/cours-code.component';
 import { FormulaireCourComponent } from './formulaire-cour/formulaire-cour.component';
 import { UpdateCourComponent } from './update-cour/update-cour.component';
+import { SeanceCoduiteComponent } from './seance-coduite/seance-coduite.component';
 
 const routes: Routes = [
   {path: "vehicule", component: VehiculeComponent},
   {path:"client", component:ClientComponent},
   {path:"CoursCode", component: CoursCodeComponent},
   {path:"addCours", component: FormulaireCourComponent},
-  {path:"updateCour/:id", component: UpdateCourComponent} 
+  {path:"updateCour/:id", component: UpdateCourComponent},
+  {path:"SeanceConduite", component: SeanceCoduiteComponent}
 ];
 
 
