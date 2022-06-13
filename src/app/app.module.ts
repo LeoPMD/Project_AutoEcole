@@ -32,10 +32,10 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
   declarations: [
     AppComponent,
     ClientComponent,
-    
+
     VehiculeComponent,
     EnregistrerVehiculeComponent,
-    ModifierVehiculeComponent
+    ModifierVehiculeComponent,
 
     FormateurComponent,
     FormulaireAddFormateurComponent,

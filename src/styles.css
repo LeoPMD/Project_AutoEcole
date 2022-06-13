@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+#img1 {
+  height: 80%;
+  width: 80%;
+}
+
+#img2 {
+  height: 100%;
+  width: 100%;
+}
+
+#moncercle{
+  background:white;
+  border-radius:50%;
+  width:160px;
+  height:160px;
+  border:2px solid cyan;
+  box-shadow: 0 15px 30px 0 rgb(76 76 221 / 23%);
+}
+
+.cercles{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.circle_text{
+  display:block;
+  padding-top:40px;
+ }
