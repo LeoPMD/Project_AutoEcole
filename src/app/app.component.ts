@@ -9,7 +9,6 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 export class AppComponent {
   title = 'Project_AutoEcole';
 
-
   mySubscription;
 
  constructor(private router: Router, private activatedRoute: ActivatedRoute){
@@ -19,6 +18,7 @@ export class AppComponent {
          // Trick the Router into believing it's last link wasn't previously loaded
          this.router.navigated = false;
       }
+
     }); 
  }
 

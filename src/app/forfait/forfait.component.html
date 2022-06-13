@@ -1,0 +1,29 @@
+<p>forfait works!</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Contenu</th>
+      <th scope="col">Fonctionnalités</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forfait of listeForfait$ | async">
+      <th scope="row">{{forfait.id}}</th>
+      <td>{{forfait.nom}}</td>
+      <td>{{forfait.montant}}€</td>
+      <td>{{forfait.contenu}}</td>
+      <td>
+        <div class="btn-group" role="group"
+							aria-label="Basic mixed styles example">
+							<button class="btn btn-danger" (click)="onDelete(forfait.id)">Supprimer</button>
+							<button class="btn btn-warning" (click)="onUpdate(forfait.id)">Modifier</button>
+						</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-success" (click)="onSave()">Ajouter Forfait</button>
