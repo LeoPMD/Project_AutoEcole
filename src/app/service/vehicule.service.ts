@@ -17,4 +17,23 @@ export class VehiculeService {
     return this.httpClient.get<Vehicule[]>(environment.url + "vehicule");
   }
 
+  enregistrerVehicule(vehicule:Vehicule):Observable<Vehicule> {
+    return this.httpClient.post<Vehicule>(environment.url + "enrVehicule", vehicule)
+  }
+
+  supprVehicule(id:number):Observable<void>
+  {
+    return this.httpClient.delete<void>(environment.url + "supprVehicule/" + id)
+  }
+
+  modifierVehicule(vehicule:Vehicule):Observable<Vehicule>{
+    return this.httpClient.put<Vehicule>(environment.url + "modifierVehicule/", vehicule)
+  }
+
+  getVehiculeById(id:number):Observable<Vehicule>
+  {
+    return this.httpClient.get<Vehicule>(environment.url + "vehicule/" + id)
+  }
+
+
 }

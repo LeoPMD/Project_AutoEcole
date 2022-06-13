@@ -1,0 +1,30 @@
+<p>modifier-vehicule works!</p>
+
+<div *ngIf="vehiculeForm">
+<form [formGroup]="vehiculeForm" (ngSubmit)="onUpdate()">
+    <div class="mb-3">
+    <label for="marque">Id du véhicule :</label>
+    <input [attr.disabled]="true" type="text" id="id" formControlName="id" size="1">
+    </div>
+
+    <div class="mb-3">
+    <label for="marque">Marque :</label>
+    <input type="text" id="marque" formControlName="marque">
+    </div>
+
+    <div class="mb-3">
+    <label for="plaqueImmatriculation">Plaque d'Immatriculation :</label>
+    <input type="text" id="plaqueImmatriculation" formControlName="plaqueImmatriculation">
+    </div>
+
+    <div class="mb-3">
+    <label for="id">Boîte de vitesse (Manuelle/Automatique) :</label>
+    <select name="boiteVitesse" id="boiteVitesse" formControlName="boiteVitesse">
+        <option value="Manuelle">Manuelle</option>
+        <option value="Automatique">Automatique</option>
+    </select>
+    </div>
+
+    <input type="submit" value="Envoyer">
+</form>
+</div>
