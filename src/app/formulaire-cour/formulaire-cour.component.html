@@ -1,0 +1,9 @@
+<p>formulaire-cour works!</p>
+
+<form [formGroup]="coursForm" (ngSubmit)="onSave()">
+
+    <label for="titre"> Titre :  </label>
+    <input type="text" id="titre" formControlName="titre">
+
+    <input type="submit" value="Envoyer">
+</form>
