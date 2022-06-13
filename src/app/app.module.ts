@@ -12,6 +12,7 @@ import { CoursCodeComponent } from './cours-code/cours-code.component';
 import { FormulaireCourComponent } from './formulaire-cour/formulaire-cour.component';
 import { UpdateCourComponent } from './update-cour/update-cour.component';
 import { SeanceCoduiteComponent } from './seance-coduite/seance-coduite.component';
+import { FormulaireSeanceComponent } from './formulaire-seance/formulaire-seance.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SeanceCoduiteComponent } from './seance-coduite/seance-coduite.componen
     CoursCodeComponent,
     FormulaireCourComponent,
     UpdateCourComponent,
-    SeanceCoduiteComponent
+    SeanceCoduiteComponent,
+    FormulaireSeanceComponent
   ],
   imports: [
     BrowserModule,
