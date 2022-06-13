@@ -12,7 +12,6 @@ export class AppComponent {
 
 mySubscription;
 
-
  constructor(private router: Router, private activatedRoute: ActivatedRoute){
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.mySubscription = this.router.events.subscribe((event) => {

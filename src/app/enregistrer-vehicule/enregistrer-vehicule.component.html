@@ -1,0 +1,17 @@
+<p>enregistrer-vehicule works!</p>
+
+<form [formGroup]="vehiculeEnr" (ngSubmit)="onSave()">
+    <label for="marque">Marque :</label>
+    <input type="text" id="marque" formControlName="marque">
+
+    <label for="plaqueImmatriculation">Plaque d'Immatriculation :</label>
+    <input type="text" id="plaqueImmatriculation" formControlName="plaqueImmatriculation">
+
+    <label for="id">Boîte de vitesse (Manuelle/Automatique) :</label>
+    <select name="boiteVitesse" id="boiteVitesse" formControlName="boiteVitesse">
+        <option value="Manuelle">Manuelle</option>
+        <option value="Automatique">Automatique</option>
+    </select>
+
+    <input type="submit" value="Envoyer">
+</form>
