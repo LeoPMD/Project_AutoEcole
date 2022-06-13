@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+#bulle-gauche, #bulle-droite-haut, #bulle-droite-bas
+{
+    width: 100%;
+    padding: 3rem 3rem 3rem;
+    box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
+    background-color:rgb(87, 204, 153);
+    color: white;
+    border-radius: 60px 60px 60px;
+    height: 100%;
+    flex-direction: column;
+    text-align: left; 
+}
+
+.stych-carousel-items {
+    display: flex;
+    padding: 1rem 0 50px 0;
+    
+}
+
+.ville {
+    margin-left: 0.5rem;
+    opacity: 0.6
+}
+
+.prenom-ville
+{
+    float:right;
+    display: flex;
+}
+
+.star 
+{
+margin-bottom:4px;
+margin-right: 10px;
+}
+
+#avis
+{
+display: flex;
+align-items: center;
+margin-right: 4rem;
+margin-left: 4rem;
+}
+
+#bulle-gauche
+{
+   margin-right: 1rem;
+   padding-bottom: 1.5rem;
+}
+
+
+
+#bulle-droite-haut
+{
+    margin-left: 1rem;
+    margin-bottom: 1cm;
+    
+}
+
+#bulle-droite-bas
+{
+    margin-left: 1rem;
+    
+}
+
+
+
+.test {
+
+animation: spins 1000ms linear infinite, move 4s linear infinite;
+transition: all ease 1s;
+position: absolute;
+}
+
+@keyframes spin {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes move {
+    from {left:-1000px;}
+    to {left: 100%;}
+}
+
+.test2 {
+
+    animation: spins 1000ms linear infinite, move2 5s linear infinite;
+    transition: all ease 1s;
+    position: absolute;
+    }
+    
+    @keyframes spin {
+        from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}
+    }
+    
+    @keyframes move2 {
+        from {right:-200px;}
+        to {right: 100%;}
+    }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export class Formateur {
-    id!:number
-    prenom!:string
-=======
+
 export class Formateur
 {
   id!: number
@@ -11,5 +7,4 @@ export class Formateur
   dateNaissance!: Date
   mail!: string
   adresse!: string
->>>>>>> branch 'master' of https://github.com/LeoPMD/Project_AutoEcole.git
 }

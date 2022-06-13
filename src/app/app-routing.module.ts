@@ -25,29 +25,23 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
 const routes: Routes = [
   {path: "vehicule", component: VehiculeComponent},
   {path:"client", component:ClientComponent},
-
   {path:"enrVehicule", component:EnregistrerVehiculeComponent},
   {path:"modifier/:id", component:ModifierVehiculeComponent},
-
   {path: "formateur", component: FormateurComponent},
   {path: "ajouterFormateur", component: FormulaireAddFormateurComponent},
   {path: "modifierFormateur/:id", component: FormulaireModifierFormateurComponent},
-
   {path:"CoursCode", component: CoursCodeComponent},
   {path:"addCours", component: FormulaireCourComponent},
   {path:"updateCour/:id", component: UpdateCourComponent},
   {path:"SeanceConduite", component: SeanceCoduiteComponent},
-<<<<<<< HEAD
-  {path:"addSeance", component: FormulaireSeanceComponent}
-=======
-
+  {path:"addSeance", component: FormulaireSeanceComponent},
   {path:"modifierClient/:id", component:ModifierClientComponent},
   {path:"ajouterClient",component:FormulaireClientComponent},
   {path:"forfait",component:ForfaitComponent},
   {path:"ajouterForfait",component:FormulaireForfaitComponent},
   {path:"modifierForfait/:id",component:ModifierForfaitComponent}
 
->>>>>>> branch 'master' of https://github.com/LeoPMD/Project_AutoEcole.git
+
 ];
 
 
