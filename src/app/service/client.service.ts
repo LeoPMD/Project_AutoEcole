@@ -15,4 +15,24 @@ export class ClientService {
   {
     return this.httpClient.get<Client[]>(environment.url + "clients")
   }
+
+  ajoutClient(client:Client):Observable<Client>
+  {
+    return this.httpClient.post<Client>(environment.url + "saveClient",client)
+  }
+
+  supprimerClient(id:number):Observable<void>
+  {
+    return this.httpClient.delete<void>(environment.url + "deleteClient/" + id)
+  }
+
+  updateClient(client:Client):Observable<Client>
+  {
+    return this.httpClient.put<Client>(environment.url + "updateClient", client)
+  }
+
+  getClientById(id:number):Observable<Client>
+  {
+    return this.httpClient.get<Client>(environment.url+"client/"+id)
+  }
 }
