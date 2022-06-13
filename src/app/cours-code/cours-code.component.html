@@ -1,0 +1,21 @@
+<p>cours-code works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Titre </th>
+        <th scope="col">Modifier/Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listeCours$ | async">
+        <th scope="row">{{c.id}}</th>
+        <td>{{c.titre}}</td>
+        <td><button (click)="onUpdate(c.id)" >Modifier</button>
+           <button (click)="onDelete(c.id)" >Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <router-outlet></router-outlet>
