@@ -1,3 +1,4 @@
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
@@ -9,7 +10,8 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 export class AppComponent {
   title = 'Project_AutoEcole';
 
-  mySubscription;
+mySubscription;
+
 
  constructor(private router: Router, private activatedRoute: ActivatedRoute){
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -19,12 +21,14 @@ export class AppComponent {
          this.router.navigated = false;
       }
 
-    }); 
+    });
  }
+
 
  ngOnDestroy(){
   if (this.mySubscription) {
     this.mySubscription.unsubscribe();
   }
 }
+
 }

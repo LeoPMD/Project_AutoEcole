@@ -1,3 +1,7 @@
+
+import { FormulaireModifierFormateurComponent } from './formulaire-modifier-formateur/formulaire-modifier-formateur.component';
+import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
+import { FormateurComponent } from './formateur/formateur.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ForfaitComponent } from './forfait/forfait.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +22,9 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
 const routes: Routes = [
   {path: "vehicule", component: VehiculeComponent},
   {path:"client", component:ClientComponent},
+  {path: "formateur", component: FormateurComponent},
+  {path: "ajouterFormateur", component: FormulaireAddFormateurComponent},
+  {path: "modifierFormateur/:id", component: FormulaireModifierFormateurComponent}
 
   {path:"CoursCode", component: CoursCodeComponent},
   {path:"addCours", component: FormulaireCourComponent},

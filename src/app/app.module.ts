@@ -1,3 +1,4 @@
+import { FormateurComponent } from './formateur/formateur.component';
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiculeComponent } from './vehicule/vehicule.component';
 import { ClientComponent } from './client/client.component';
+import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
+import { FormulaireModifierFormateurComponent } from './formulaire-modifier-formateur/formulaire-modifier-formateur.component';
 
 import { CoursCodeComponent } from './cours-code/cours-code.component';
 import { FormulaireCourComponent } from './formulaire-cour/formulaire-cour.component';
@@ -26,6 +29,10 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
     AppComponent,
     VehiculeComponent,
     ClientComponent,
+
+    FormateurComponent,
+    FormulaireAddFormateurComponent,
+    FormulaireModifierFormateurComponent,
 
     CoursCodeComponent,
     FormulaireCourComponent,
