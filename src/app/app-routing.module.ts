@@ -1,3 +1,5 @@
+import { AccueilComponent } from './accueil/accueil.component';
+import { AppComponent } from './app.component';
 
 import { FormulaireModifierFormateurComponent } from './formulaire-modifier-formateur/formulaire-modifier-formateur.component';
 import { FormulaireAddFormateurComponent } from './formulaire-add-formateur/formulaire-add-formateur.component';
@@ -22,6 +24,8 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
 
 
 const routes: Routes = [
+  {path: "accueil", component: AccueilComponent},
+  {path: "", redirectTo : "/accueil", pathMatch: "full"},
   {path: "vehicule", component: VehiculeComponent},
   {path:"client", component:ClientComponent},
 
