@@ -27,6 +27,42 @@
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col"><img id="img1" src="https://le-cdn.website-editor.net/md/and1/dms3rep/multi/opt/120889-1920w.jpeg" alt="Image Moniteur Auto-Ecole"></div>
+        <div class="col">
+          <h4>Des Moniteurs à votre écoute</h4>
+          <p>Tous nos moniteurs sont à votre écoute et vous accompagnent dans votre appretissage.</p>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <h4>Nous sommes là où tu es.</h4>
+          <p>Tu peux nous retourver dans les quatre coins de la France. Il y a toujours une agence Inti Conduite près de chez toi.</p>
+        </div>
+        <div class="col"><img id="img2" src="https://static-cse.canva.com/blob/191852/Carte_du_monde_france_europe-_vierge-image_02.png" alt="Carte de France Vierge"></div>
+      </div>
+    </div>
+
+    <h2 align="center">Statistiques</h2>
+    <div class="cercles">
+        <div class="moncercle">
+          <p class="circle_text">Nombre d'élèves :</p>
+          <p class="nombre">{{eleve$ | async}}</p>
+        </div>
+        <div class="moncercle">
+          <p class="circle_text">Nombre d'enseignants :</p>
+          <p class="nombre">{{enseignant$ | async}}</p>
+        </div>
+        <div class="moncercle">
+          <p class="circle_text">Taux de Réussite :</p>
+          <p class="nombre">{{reussite$ | async}} %</p>
+        </div>
+      </div>
+  </section>
+
 <div>
     <span>---------------------------------section commentaire/avis--------------------------------</span>
 </div>
@@ -35,7 +71,7 @@
     <div id="avis">
         <div id="bulle-gauche">
 
-        <div class="mb-4 texte-avis">Auto-école simple et efficace moins de paperasse tout est en ligne</div>     
+        <div class="mb-4 texte-avis">Auto-école simple et efficace moins de paperasse tout est en ligne</div>
            <div class="prenom-ville">
              <div>
                  <img class="star" src="https://www.stych.fr/img/stych/stars/5.png">
@@ -51,8 +87,8 @@
             <div class="mb-4 texte-avis">Très bon service. C'est une auto-école qui offre une formation très complète avec des très bons outils pédagogiques. Les enseignants sont très bien formés dans leur domaine et très sympas!
                 </div>
 
-          
-               
+
+
                <div class="prenom-ville">
                 <div>
                     <img  class="star" src="https://www.stych.fr/img/stych/stars/5.png">
@@ -60,7 +96,7 @@
                Paul P.
                <span class="ville">Le Havre</span>
              </div>
-           
+
          </div>
 
          <div id="bulle-droite-bas">
@@ -73,14 +109,14 @@
               Jacques M.
                <span class="ville">Lille</span>
              </div>
-            
+
          </div>
         </div>
      </div>
 
-     
+
      <br><br><br>
-     
+
      <div class="test"><img src="https://www.pngplay.com/wp-content/uploads/7/Car-Transparent-Free-PNG.png" alt="voiture vert"  height="200"></div>
  </section>
 

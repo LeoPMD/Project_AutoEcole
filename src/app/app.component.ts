@@ -1,7 +1,6 @@
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,11 +24,14 @@ mySubscription;
     });
  }
 
+ ngOnInit (){
+ }
 
  ngOnDestroy(){
   if (this.mySubscription) {
     this.mySubscription.unsubscribe();
   }
 }
+
 
 }
