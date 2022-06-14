@@ -36,3 +36,296 @@
   font-weight: bold;
   color: blue;
  }
+/* class réutilisables */
+.resize-image {
+  max-width: 250px;
+  max-height: 300px;
+}
+.resize-text {
+  max-width: 250px;
+  text-align: justify;
+}
+.spacing-title {
+  margin: 5px 0 ;
+}
+.pointer {
+  cursor: cell;
+}
+/* general html */
+
+.container-infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 2px dashed #333;
+  border-bottom: 2px dashed #333;
+  margin: 10px 0;
+}
+
+.testclass:hover {
+  color: #619B8A;
+}
+
+.informations_section--titre {
+  flex-basis: auto;
+  text-align: center;
+  background-color: #233D4D;
+  color: white;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.informations_section--titre > h2 {
+  padding: 40px;
+}
+
+.informations_section--elements {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-around;
+}
+
+.informations_section--elements > div {
+  background-color: #619B8A;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.informations_section--elements > div > p, h3 {
+  padding: 10px;
+}
+
+
+#bulle-gauche, #bulle-droite-haut, #bulle-droite-bas
+{
+    width: 100%;
+    padding: 3rem 3rem 3rem;
+    box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
+    background-color:rgb(87, 204, 153);
+    color: white;
+    border-radius: 60px 60px 60px;
+    height: 100%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.stych-carousel-items {
+    display: flex;
+    padding: 1rem 0 50px 0;
+
+}
+
+.ville {
+    margin-left: 0.5rem;
+    opacity: 0.6
+}
+
+.prenom-ville
+{
+    float:right;
+    display: flex;
+    font-size: 1.1rem;
+}
+
+.star
+{
+margin-bottom:4px;
+margin-right: 10px;
+}
+
+#avis
+{
+display: flex;
+align-items: center;
+margin-right: 4rem;
+margin-left: 4rem;
+max-width: 1365px;
+margin-right: auto;
+margin-left: auto;
+}
+
+
+#bulle-gauche
+{
+   margin-right: 3rem;
+   padding-bottom: 1.5rem;
+}
+
+
+#bulle-droite-haut
+{
+    margin-bottom: 1cm;
+}
+
+
+.test {
+
+animation: spins 1000ms linear infinite, move 5s linear infinite;
+
+position: absolute;
+}
+
+@keyframes spin {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes move {
+    from {left:-200px;}
+    to {left: 100%;}
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+.texte-avis
+{
+    font-size:1.5rem;
+
+}
+
+
+@keyframes down{
+	0% {position:relative; top:0px; opacity: 0}
+	50% {position:relative; top:15px; opacity: 0.5}
+	100% {position:relative; top:30px; opacity: 1}
+
+}
+
+.fleche{
+	animation: down 1s infinite linear alternate;
+	width: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+
+.nav{
+ padding-top: 5px;
+ padding-bottom: 5PX;
+ margin-left: 3%;
+ margin-right: 3%;
+ background-color: white;
+}
+
+.Pourquoi{
+  font-family: cursive;
+}
+
+.quelqueInfo{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200%;
+  margin-top: 5%;
+  border-radius: 60px 60px 60px 60px;
+
+}
+
+.permisChezNous{
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 20%;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.prixConduite{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.prixCode{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+}
+.section1{
+  background-color: white;
+  border-style: outset;
+  padding-bottom: 50px;
+  border-radius: 0px 0px 30% 30%;
+}
+
+.imageVoiture{
+  background: url("https://www.aircar.ma/img/car/large/65.png");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin: 5%;
+}
+
+.prix:hover{
+  transform: scale(1.1);
+
+  transition: 0.3s all;
+}
+
+.form-select{
+  background-color: white;
+  border: white;
+}
+
+.logo{
+  background: url(./assets/image/voiture_nom.png);
+  background-size: 100% 100%;
+  width: 120px;
+  height: 100px;
+}
+
+.voiture{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 200%;
+margin-top: 5%;
+margin-right: 5%;
+padding-left: 1%;
+
+}
+
+.prixCodeConduite{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  margin-top: -20%;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+}
+
+.navText{
+  color: rgba(0,0,0,1)!important;
+}

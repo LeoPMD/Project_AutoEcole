@@ -14,83 +14,159 @@
 <button routerLink="/forfait">Afficher les Forfaits</button>
 
 
-<router-outlet></router-outlet>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid nav">
+    <a class="navbar-brand logo" routerLink="/accueil"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link navText" >Code</a>
         </li>
+
+        <div class="navbar-collapse " [class.collapse]="collapsed" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                Session de conduite
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">S'inscrire</a>
+                <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateur</a>
+                <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Vehicule</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                Forfaits
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Code</a>
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Conduite</a>
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Permis</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Stage de recupération du permis</a>
+            </li>
+          </ul>
+        </div>
+
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item" ngbDropdown>
-          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
-            Static
-          </a>
-          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-            <a ngbDropdownItem routerLink="/client" (click)="$event.preventDefault()">Action</a>
-            <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Another action</a>
-            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
-          </div>
+          <a class="nav-link active" aria-current="page" href="#">Contact</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info" type="submit">Connexion</button>
+        <button class="btn btn-outline-success" type="submit">Se connecter</button>
       </form>
     </div>
   </div>
 </nav>
+</header>
 
 
 
 
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col"><img id="img1" src="https://le-cdn.website-editor.net/md/and1/dms3rep/multi/opt/120889-1920w.jpeg" alt="Image Moniteur Auto-Ecole"></div>
-    <div class="col">
-      <h4>Des Moniteurs à votre écoute</h4>
-      <p>Tous nos moniteurs sont à votre écoute et vous accompagnent dans votre appretissage.</p>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col">
-      <h4>Nous sommes là où tu es.</h4>
-      <p>Tu peux nous retourver dans les quatre coins de la France. Il y a toujours une agence Inti Conduite près de chez toi.</p>
-    </div>
-    <div class="col"><img id="img2" src="https://static-cse.canva.com/blob/191852/Carte_du_monde_france_europe-_vierge-image_02.png" alt="Carte de France Vierge"></div>
-  </div>
+<div>
+    <span>---------------------------------section commentaire/avis--------------------------------</span>
 </div>
 
-<h2 align="center">Statistiques</h2>
-<div class="cercles">
-    <div class="moncercle">
-      <p class="circle_text">Nombre d'élèves :</p>
-      <p class="nombre">{{eleve$ | async}}</p>
+ <section>
+    <div id="avis">
+        <div id="bulle-gauche">
+
+        <div class="mb-4 texte-avis">Auto-école simple et efficace moins de paperasse tout est en ligne</div>
+           <div class="prenom-ville">
+             <div>
+                 <img class="star" src="https://www.stych.fr/img/stych/stars/5.png">
+             </div>
+           Pierre B.
+           <span class="ville">Toulouse</span>
+         </div>
+
     </div>
-    <div class="moncercle">
-      <p class="circle_text">Nombre d'enseignants :</p>
-      <p class="nombre">{{enseignant$ | async}}</p>
+
+     <div class="bulle-droite">
+         <div id="bulle-droite-haut">
+            <div class="mb-4 texte-avis">Très bon service. C'est une auto-école qui offre une formation très complète avec des très bons outils pédagogiques. Les enseignants sont très bien formés dans leur domaine et très sympas!
+                </div>
+
+               <div class="prenom-ville">
+                <div>
+                    <img  class="star" src="https://www.stych.fr/img/stych/stars/5.png">
+                 </div>
+               Paul P.
+               <span class="ville">Le Havre</span>
+             </div>
+
+         </div>
+
+         <div id="bulle-droite-bas">
+            <div class="mb-4 texte-avis">Très très bonne auto école ! Moniteur au top! Rapide et efficace</div>
+
+               <div class="prenom-ville" >
+                <div>
+                    <img  class="star" src="https://www.stych.fr/img/stych/stars/5.png">
+                 </div>
+              Jacques M.
+               <span class="ville">Lille</span>
+             </div>
+
+         </div>
+        </div>
+     </div>
+
+
+     <br><br><br>
+
+     <div class="test"><img src="https://www.pngplay.com/wp-content/uploads/7/Car-Transparent-Free-PNG.png" alt="voiture vert"  height="200"></div>
+ </section>
+
+ <section>
+	<img class="fleche" src="https://joannieparent.com/wp-content/uploads/2019/08/fleche-double-angle-vers-le-bas-1.png" alt="fleche">
+</section>
+
+
+
+
+
+<router-outlet></router-outlet>
+
+<div class="container-infos">
+    <div class="informations_section--titre">
+        <h2 class="testclass">La formation du code en ligne :</h2>
     </div>
-    <div class="moncercle">
-      <p class="circle_text">Taux de Réussite :</p>
-      <p class="nombre">{{reussite$ | async}} %</p>
+    <div class="informations_section--elements">
+        <div class="information_section--apprendre">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Apprentissage.</h3>
+            <p class="resize-text">29 examens blancs pour vous évaluer dans les mêmes conditions qu'à l’examen officiel.</p>
+        </div>
+        <div class="information_section--entrainement">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Entrainement</h3>
+            <p class="resize-text">5414 questions de Code pour vous entraîner librement.</p>
+        </div>
+        <div class="information_section--evaluation">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Évaluation</h3>
+            <p class="resize-text">29 examens blancs pour vous évaluer dans les mêmes conditions qu'à l’examen officiel</p>
+        </div>
     </div>
-  </div>
+</div>
