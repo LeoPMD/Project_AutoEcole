@@ -32,4 +32,6 @@ export class FormateurComponent implements OnInit {
     this.router.navigateByUrl("/formateur")
   }
 
+
+
 }

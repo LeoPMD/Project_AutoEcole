@@ -14,6 +14,67 @@
 <button routerLink="/forfait">Afficher les Forfaits</button>
 
 
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid nav">
+    <a class="navbar-brand logo" routerLink="/accueil"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link navText" >Code</a>
+        </li>
+
+        <div class="navbar-collapse " [class.collapse]="collapsed" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                Session de conduite
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">S'inscrire</a>
+                <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateur</a>
+                <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Vehicule</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                Forfaits
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Code</a>
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Conduite</a>
+                <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Permis</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Stage de recupération du permis</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-outline-success" type="submit">Se connecter</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>
+
+
 
 
 <div>
@@ -74,5 +135,9 @@
  <section>
 	<img class="fleche" src="https://joannieparent.com/wp-content/uploads/2019/08/fleche-double-angle-vers-le-bas-1.png" alt="fleche">
 </section>
+
+
+
+
 
 <router-outlet></router-outlet>

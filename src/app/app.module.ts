@@ -22,12 +22,17 @@ import { ForfaitComponent } from './forfait/forfait.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
+    VehiculeComponent,
+    EnregistrerVehiculeComponent,
+    ModifierVehiculeComponent,
     VehiculeComponent,
     EnregistrerVehiculeComponent,
     ModifierVehiculeComponent,
@@ -52,7 +57,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

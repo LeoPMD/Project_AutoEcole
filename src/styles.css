@@ -1,3 +1,4 @@
+
 #bulle-gauche, #bulle-droite-haut, #bulle-droite-bas
 {
     width: 100%;
@@ -103,4 +104,133 @@ div
     margin-right: auto;
     display: flex;
 }
+
+
+.nav{
+ padding-top: 5px;
+ padding-bottom: 5PX;
+ margin-left: 3%;
+ margin-right: 3%;
+ background-color: white;
+}
+
+.Pourquoi{
+  font-family: cursive;
+}
+
+.quelqueInfo{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200%;
+  margin-top: 5%;
+  border-radius: 60px 60px 60px 60px;
+
+}
+
+.permisChezNous{
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 20%;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.prixConduite{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.prixCode{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+}
+.section1{
+  background-color: white;
+  border-style: outset;
+  padding-bottom: 50px;
+  border-radius: 0px 0px 30% 30%;
+}
+
+.imageVoiture{
+  background: url("https://www.aircar.ma/img/car/large/65.png");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin: 5%;
+}
+
+.prix:hover{
+  transform: scale(1.1);
+
+  transition: 0.3s all;
+}
+
+.form-select{
+  background-color: white;
+  border: white;
+}
+
+.logo{
+  background: url(./assets/image/voiture_nom.png);
+  background-size: 100% 100%;
+  width: 120px;
+  height: 100px;
+}
+
+.voiture{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 200%;
+margin-top: 5%;
+margin-right: 5%;
+padding-left: 1%;
+
+}
+
+.prixCodeConduite{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  margin-top: -20%;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+}
+
+.navText{
+  color: rgba(0,0,0,1)!important;
+}
+
+
 
