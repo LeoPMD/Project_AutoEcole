@@ -120,4 +120,8 @@ padding-left: 1%;
   border-radius: 60px 60px 60px 60px;
 }
 
+.navText{
+  color: rgba(0,0,0,1)!important;
+}
+
 
