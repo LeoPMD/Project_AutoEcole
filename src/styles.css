@@ -13,8 +13,8 @@
 #moncercle{
   background:white;
   border-radius:50%;
-  width:160px;
-  height:160px;
+  width:225px;
+  height:225px;
   border:2px solid cyan;
   box-shadow: 0 15px 30px 0 rgb(76 76 221 / 23%);
 }
@@ -27,5 +27,12 @@
 
 .circle_text{
   display:block;
-  padding-top:40px;
+  padding-top:60px;
+  font-size: 0.5cm;
+ }
+
+ .nombre {
+  font-size: 1.5cm;
+  font-weight: bold;
+  color: blue;
  }

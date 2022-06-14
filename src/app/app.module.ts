@@ -26,6 +26,7 @@ import { FormulaireClientComponent } from './formulaire-client/formulaire-client
 import { ForfaitComponent } from './forfait/forfait.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
