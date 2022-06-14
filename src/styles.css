@@ -1,3 +1,111 @@
+
+#bulle-gauche, #bulle-droite-haut, #bulle-droite-bas
+{
+    width: 100%;
+    padding: 3rem 3rem 3rem;
+    box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
+    background-color:rgb(87, 204, 153);
+    color: white;
+    border-radius: 60px 60px 60px;
+    height: 100%;
+    flex-direction: column;
+    text-align: left; 
+}
+
+.stych-carousel-items {
+    display: flex;
+    padding: 1rem 0 50px 0;
+    
+}
+
+.ville {
+    margin-left: 0.5rem;
+    opacity: 0.6
+}
+
+.prenom-ville
+{
+    float:right;
+    display: flex;
+    font-size: 1.1rem;
+}
+
+.star 
+{
+margin-bottom:4px;
+margin-right: 10px;
+}
+
+#avis
+{
+display: flex;
+align-items: center;
+margin-right: 4rem;
+margin-left: 4rem;
+max-width: 1365px;
+margin-right: auto;
+margin-left: auto;
+}
+
+
+#bulle-gauche
+{
+   margin-right: 3rem;
+   padding-bottom: 1.5rem;
+}
+
+
+#bulle-droite-haut
+{
+    margin-bottom: 1cm;
+}
+
+
+.test {
+
+animation: spins 1000ms linear infinite, move 5s linear infinite;
+
+position: absolute;
+}
+
+@keyframes spin {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes move {
+    from {left:-200px;}
+    to {left: 100%;}
+}
+
+div 
+{
+    border: 1px solid black;
+}
+
+.texte-avis
+{
+    font-size:1.5rem;
+    
+}
+
+
+@keyframes down{
+	0% {position:relative; top:0px; opacity: 0}
+	50% {position:relative; top:15px; opacity: 0.5}
+	100% {position:relative; top:30px; opacity: 1}
+
+}
+
+.fleche{
+	animation: down 1s infinite linear alternate;
+	width: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+
 .nav{
  padding-top: 5px;
  padding-bottom: 5PX;
@@ -123,5 +231,6 @@ padding-left: 1%;
 .navText{
   color: rgba(0,0,0,1)!important;
 }
+
 
 
