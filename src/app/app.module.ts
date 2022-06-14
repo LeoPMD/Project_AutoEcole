@@ -23,6 +23,8 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+
 
 
 
@@ -46,7 +48,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ForfaitComponent,
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
-    AccueilComponent
+    AccueilComponent,
+    MenuAdminComponent
 
   ],
   imports: [
@@ -58,6 +61,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,MenuAdminComponent]
 })
 export class AppModule { }

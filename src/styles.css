@@ -176,11 +176,6 @@ position: absolute;
     to {left: 100%;}
 }
 
-div
-{
-    border: 1px solid black;
-}
-
 .texte-avis
 {
     font-size:1.5rem;
@@ -273,13 +268,11 @@ div
 }
 
 .imageVoiture{
-  background: url("https://www.aircar.ma/img/car/large/65.png");
-  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 300px;
+  height: 50%;
   margin: 5%;
 }
 
@@ -328,4 +321,12 @@ padding-left: 1%;
 
 .navText{
   color: rgba(0,0,0,1)!important;
+}
+
+.bd-sidebar {
+  grid-area: sidebar;
+}
+
+.bd-main {
+  grid-area: main;
 }

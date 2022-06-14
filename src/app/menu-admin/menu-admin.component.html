@@ -1,0 +1,62 @@
+<div class="container-xxl my-md-4 bd-layout">
+
+
+<aside class="bd-sidebar">
+
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+    <a class="navbar-brand logo" routerLink="/accueil"></a>
+    <li class="nav-item dropdown" ngbDropdown>
+      <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Afficher Liste</a>
+      <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+        <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateurs</a>
+        <a ngbDropdownItem routerLink="/client" (click)="$event.preventDefault()">Elèves</a>
+        <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Voitures</a>
+        <a ngbDropdownItem routerLink="/CoursCode" (click)="$event.preventDefault()">Cours</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown" ngbDropdown>
+      <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Ajouter Element</a>
+      <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+        <a ngbDropdownItem routerLink="/ajouterFormateur" (click)="$event.preventDefault()">Ajouter Formateur</a>
+        <a ngbDropdownItem routerLink="/ajouterClient" (click)="$event.preventDefault()">Ajouter Elève</a>
+        <a ngbDropdownItem routerLink="/enrVehicule" (click)="$event.preventDefault()">Ajouter Voiture</a>
+        <a ngbDropdownItem routerLink="/addCours" (click)="$event.preventDefault()">Ajouter Cours</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link navText" routerLink="/forfait">Gestion Forfait</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link navText" routerLink="/ajouterForfait">Ajouter Forfait</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link navText" routerLink="/menuadmin">Accueil Gestion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link navText" routerLink="/accueil">Accueil</a>
+    </li>
+    <form class="d-flex">
+      <button class="btn btn-outline-success" type="submit">Déconnexion</button>
+    </form>
+  </ul>
+  </div>
+</nav>
+</aside>
+<main class="bd-main">
+  <div class="container">
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+    <div class="row">
+      <div class="col-8">col-8</div>
+      <div class="col-4">col-4</div>
+    </div>
+  </div>
+</main>
+</div>
+<router-outlet></router-outlet>
