@@ -1,3 +1,63 @@
+/* class réutilisables */
+.resize-image {
+  max-width: 250px;
+  max-height: 300px;
+}
+.resize-text {
+  max-width: 250px;
+  text-align: justify;
+}
+.spacing-title {
+  margin: 5px 0 ;
+}
+.pointer {
+  cursor: cell;
+}
+/* general html */
+
+.container-infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 2px dashed #333;
+  border-bottom: 2px dashed #333;
+  margin: 10px 0;
+}
+
+.testclass:hover {
+  color: #619B8A;
+}
+
+.informations_section--titre {
+  flex-basis: auto;
+  text-align: center;
+  background-color: #233D4D;
+  color: white;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.informations_section--titre > h2 {
+  padding: 40px;
+}
+
+.informations_section--elements {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-around;
+}
+
+.informations_section--elements > div {
+  background-color: #619B8A;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.informations_section--elements > div > p, h3 {
+  padding: 10px;
+}
+
 
 #bulle-gauche, #bulle-droite-haut, #bulle-droite-bas
 {
@@ -231,6 +291,3 @@ padding-left: 1%;
 .navText{
   color: rgba(0,0,0,1)!important;
 }
-
-
-
