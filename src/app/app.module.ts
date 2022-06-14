@@ -21,6 +21,7 @@ import { FormulaireClientComponent } from './formulaire-client/formulaire-client
 import { ForfaitComponent } from './forfait/forfait.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
     FormulaireClientComponent,
     ForfaitComponent,
     FormulaireForfaitComponent,
-    ModifierForfaitComponent
+    ModifierForfaitComponent,
+    AccueilComponent
 
   ],
   imports: [

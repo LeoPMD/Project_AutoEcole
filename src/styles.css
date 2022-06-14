@@ -26,6 +26,7 @@
 {
     float:right;
     display: flex;
+    font-size: 1.1rem;
 }
 
 .star 
@@ -40,35 +41,29 @@ display: flex;
 align-items: center;
 margin-right: 4rem;
 margin-left: 4rem;
+max-width: 1365px;
+margin-right: auto;
+margin-left: auto;
 }
+
 
 #bulle-gauche
 {
-   margin-right: 1rem;
+   margin-right: 3rem;
    padding-bottom: 1.5rem;
 }
 
 
-
 #bulle-droite-haut
 {
-    margin-left: 1rem;
     margin-bottom: 1cm;
-    
 }
-
-#bulle-droite-bas
-{
-    margin-left: 1rem;
-    
-}
-
 
 
 .test {
 
-animation: spins 1000ms linear infinite, move 4s linear infinite;
-transition: all ease 1s;
+animation: spins 1000ms linear infinite, move 5s linear infinite;
+
 position: absolute;
 }
 
@@ -78,23 +73,17 @@ position: absolute;
 }
 
 @keyframes move {
-    from {left:-1000px;}
+    from {left:-200px;}
     to {left: 100%;}
 }
 
-.test2 {
+div 
+{
+    border: 1px solid black;
+}
 
-    animation: spins 1000ms linear infinite, move2 5s linear infinite;
-    transition: all ease 1s;
-    position: absolute;
-    }
+.texte-avis
+{
+    font-size:1.5rem;
     
-    @keyframes spin {
-        from {-webkit-transform: rotate(0deg);}
-        to {-webkit-transform: rotate(360deg);}
-    }
-    
-    @keyframes move2 {
-        from {right:-200px;}
-        to {right: 100%;}
-    }
+}
