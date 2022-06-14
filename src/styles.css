@@ -87,3 +87,19 @@ div
     font-size:1.5rem;
     
 }
+
+
+@keyframes down{
+	0% {position:relative; top:0px; opacity: 0}
+	50% {position:relative; top:15px; opacity: 0.5}
+	100% {position:relative; top:30px; opacity: 1}
+
+}
+
+.fleche{
+	animation: down 1s infinite linear alternate;
+	width: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
