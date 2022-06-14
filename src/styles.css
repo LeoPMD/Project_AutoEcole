@@ -34,12 +34,20 @@
 }
 
 .testclass:hover {
-  color: red;
+  color: #619B8A;
 }
 
 .informations_section--titre {
   flex-basis: auto;
   text-align: center;
+  background-color: #233D4D;
+  color: white;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.informations_section--titre > h2 {
+  padding: 40px;
 }
 
 .informations_section--elements {
@@ -48,38 +56,15 @@
   justify-content: space-around;
 }
 
+.informations_section--elements > div {
+  background-color: #619B8A;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+  border-radius: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.informations_section--elements > div > p, h3 {
+  padding: 10px;
+}
 
 
 
