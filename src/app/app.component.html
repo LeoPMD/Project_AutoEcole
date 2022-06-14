@@ -43,7 +43,7 @@
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-info" type="submit">Connexion</button>
       </form>
     </div>
   </div>
@@ -81,16 +81,16 @@
 
 <h2 align="center">Statistiques</h2>
 <div class="cercles">
-    <div id="moncercle">
+    <div class="moncercle">
       <p class="circle_text">Nombre d'élèves :</p>
-      <p class="nombre">425</p>
+      <p class="nombre">{{eleve$ | async}}</p>
     </div>
-    <div id="moncercle">
+    <div class="moncercle">
       <p class="circle_text">Nombre d'enseignants :</p>
-      <p class="nombre">39</p>
+      <p class="nombre">{{enseignant$ | async}}</p>
     </div>
-    <div id="moncercle">
+    <div class="moncercle">
       <p class="circle_text">Taux de Réussite :</p>
-      <p class="nombre">98 %</p>
+      <p class="nombre">{{reussite$ | async}} %</p>
     </div>
   </div>

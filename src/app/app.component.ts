@@ -1,5 +1,7 @@
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { NgbPaginationNumber } from '@ng-bootstrap/ng-bootstrap';
+import { filter, interval, map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Project_AutoEcole';
   collapsed = true
+  eleve$!: Observable<string>
+  enseignant$!: Observable<string>
+  reussite$!: Observable<string>
 
 mySubscription;
 
@@ -23,11 +28,25 @@ mySubscription;
     });
  }
 
+ ngOnInit (){
+  this.eleve$ = this.afficheNombre(425)
+  this.enseignant$ = this.afficheNombre(39)
+  this.reussite$ = this.afficheNombre(98)
+ }
 
  ngOnDestroy(){
   if (this.mySubscription) {
     this.mySubscription.unsubscribe();
   }
 }
+
+afficheNombre(n:number):Observable<string>
+  {
+    return interval(1).pipe(
+      // take(6),
+      filter(value => value <= n),
+      map(value => ""+value)
+    )
+  }
 
 }
