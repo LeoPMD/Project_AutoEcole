@@ -78,7 +78,8 @@
 }
 
 .prix:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
+
   transition: 0.3s all;
 }
 
@@ -93,4 +94,30 @@
   width: 120px;
   height: 100px;
 }
+
+.voiture{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 200%;
+margin-top: 5%;
+margin-right: 5%;
+padding-left: 1%;
+
+}
+
+.prixCodeConduite{
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: rgb(64, 64, 187);
+  color: white;
+  margin-right: 10%;
+  margin-top: -20%;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 1px solid black;
+  border-radius: 60px 60px 60px 60px;
+}
+
 
