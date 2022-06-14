@@ -1,0 +1,30 @@
+<p>formulaire-seance works!</p>
+
+<form [formGroup]="seanceForm" (ngSubmit)="onSave()">
+
+    <label for="dateSeance"> Date de la séance :  </label>
+    <input type="date" id="dateSeance" formControlName="dateSeance">
+    <br>
+    <label for="heureDebutSeance"> Heure de début de la séance :  </label>
+    <input type="time" id="heureDebutSeance" formControlName="heureDebutSeance">
+    <br>
+    <label for="heureFinSeance"> Heure de fin de la séance :  </label>
+    <input type="time" id="heureFinSeance" formControlName="heureFinSeance">
+    <br>
+    <label for="vehicule"> Vehicule : </label>
+    <select id="vehicule" formControlName="vehicule">  
+        <option *ngFor="let lc of listeSeances$ | async">{{lc.vehicule.marque}}</option>  
+    </select>
+    <br>
+    <label for="client"> Client : </label>
+    <select id="client" formControlName="client">  
+        <option *ngFor="let lc of listeSeances$ | async">{{lc.client.nom}}</option>  
+    </select>
+    <br>
+    <label for="formateur"> Formateur : </label>
+    <select id="formateur" formControlName="formateur">  
+        <option *ngFor="let lc of listeSeances$ | async">{{lc.formateur.prenom}}</option>  
+    </select>
+<br>
+    <input type="submit" value="Envoyer">
+</form>
