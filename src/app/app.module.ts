@@ -35,7 +35,7 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
     
     VehiculeComponent,
     EnregistrerVehiculeComponent,
-    ModifierVehiculeComponent
+    ModifierVehiculeComponent,
 
     FormateurComponent,
     FormulaireAddFormateurComponent,

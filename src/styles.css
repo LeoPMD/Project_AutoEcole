@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.flex-container-informations {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items:center;
+
+  
+}
+
+.flex-item:nth-child(1) {
+  background-color: #FCCA46;
+  margin-right: 8rem;
+  flex-grow: 1;
+  width: 2rem;
+  height: 20rem;
+  width: min-content;
+  box-shadow: 0px 10px 15px rgb(172, 172, 172);
+}
+
+
+  
+
+.flex-item {
+    padding: 1.5rem;
+    margin: 1rem;
+    text-align: left;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: #619B8A;
+    flex-grow: 1;
+    /* max-width: 120px;
+    min-width: 60px; */
+    width: 5rem;
+    height: 10rem;
+    width: min-content;
+    box-shadow: 0px 10px 15px rgb(172, 172, 172);
+}
