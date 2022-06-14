@@ -1,14 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
-.flex-container-informations {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items:center;
-
-  
+/* reset général */
+* {
+  box-sizing: border-box;
+  margin: 0;  /* on réduit les marges à 0 */
+  padding: 0; /* pareils */
 }
 
-.flex-item:nth-child(1) {
+/* class réutilisables */
+.resize-image {
+  max-width: 250px;
+  max-height: 300px;
+}
+.resize-text {
+  max-width: 250px;
+  text-align: justify;
+}
+.spacing-title {
+  margin: 5px 0 ;
+}
+.pointer {
+  cursor: cell;
+}
+/* general html */
+
+.container-infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 2px dashed #333;
+  border-bottom: 2px dashed #333;
+  margin: 10px 0;
+}
+
+.testclass:hover {
+  color: red;
+}
+
+.informations_section--titre {
+  flex-basis: auto;
+  text-align: center;
+}
+
+.informations_section--elements {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .flex-item:nth-child(1) {
   background-color: #FCCA46;
   margin-right: 8rem;
   flex-grow: 1;
@@ -29,10 +107,12 @@
     border-radius: 20px;
     background-color: #619B8A;
     flex-grow: 1;
-    /* max-width: 120px;
-    min-width: 60px; */
+    max-width: 120px;
+    min-width: 60px;
     width: 5rem;
     height: 10rem;
     width: min-content;
     box-shadow: 0px 10px 15px rgb(172, 172, 172);
-}
+} 
+
+*/
