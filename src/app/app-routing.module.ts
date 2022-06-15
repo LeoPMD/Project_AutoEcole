@@ -1,3 +1,5 @@
+import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
+import { ForfaitClientComponent } from './forfait-client/forfait-client.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AppComponent } from './app.component';
 
@@ -43,7 +45,9 @@ const routes: Routes = [
   {path:"ajouterClient",component:FormulaireClientComponent},
   {path:"forfait",component:ForfaitComponent},
   {path:"ajouterForfait",component:FormulaireForfaitComponent},
-  {path:"modifierForfait/:id",component:ModifierForfaitComponent}
+  {path:"modifierForfait/:id",component:ModifierForfaitComponent},
+  {path: "forfaitClient", component: ForfaitClientComponent},
+  {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent}
 
 
 ];

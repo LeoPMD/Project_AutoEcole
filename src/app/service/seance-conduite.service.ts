@@ -15,7 +15,7 @@ export class SeanceConduiteService {
   {
     return this.httpClient.get<SeanceConduite[]>(environment.url + "SeanceConduite")
   }
-  
+
   ajoutSeance(seance:SeanceConduite):Observable<SeanceConduite>
   {
    return this.httpClient.post<SeanceConduite>(environment.url + "saveSeance", seance)

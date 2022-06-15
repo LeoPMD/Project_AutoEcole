@@ -1,3 +1,4 @@
+import { Forfait } from './forfait.model';
 export class Client {
   id!:number
   nom!:string
@@ -5,4 +6,5 @@ export class Client {
   dateNaissance!:Date
   mail!:string
   adresse!:string
+  forfait!:Forfait
 }
