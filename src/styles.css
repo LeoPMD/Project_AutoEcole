@@ -21,7 +21,7 @@
   height:225px;
   border:2px solid rgb(254, 127, 45);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
-  margin: rem;
+  margin: 3rem;
 }
 
 .cercles{
@@ -106,7 +106,7 @@
     width: 100%;
     padding: 3rem 3rem 3rem;
     box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
-    background-color:rgb(87, 204, 153);
+    background: linear-gradient(rgba(97, 155, 138), rgba(87, 204, 153));
     color: white;
     border-radius: 60px 60px 60px;
     height: 100%;
@@ -147,6 +147,7 @@ margin-left: 4rem;
 max-width: 1365px;
 margin-right: auto;
 margin-left: auto;
+
 }
 
 
@@ -154,12 +155,14 @@ margin-left: auto;
 {
    margin-right: 3rem;
    padding-bottom: 1.5rem;
+   
 }
 
 
 #bulle-droite-haut
 {
     margin-bottom: 1cm;
+    
 }
 
 
@@ -180,16 +183,13 @@ position: absolute;
     to {left: 100%;}
 }
 
-div
-{
-
-}
 
 .pourquoi {
     font-family: 'Just Another Hand', cursive;
     font-size: 290%;
     text-align: left;
-    color: red
+    color: red;
+    margin-top: 10px
 
 }
 .Pourquoi
@@ -201,7 +201,7 @@ div
 {
     margin-left: 5rem !important;
     width: 110rem;
-
+ 
 }
 .texte-avis
 {
@@ -256,6 +256,57 @@ div
     margin-left: auto;
 }
 
+.titremono
+{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 50px;
+    color: red;
+}
+
+.formateurs-image-text
+{
+display: flex;
+align-items: center;
+
+color:rgb(254, 127, 45);
+margin-bottom: 4rem;
+max-width: 1300px;
+margin-right: auto;
+margin-left: auto;
+
+}
+
+
+.formateurs-image
+{
+   width: 450px;
+   height: 270px;
+   object-fit: cover;
+   border-radius: 40px 40px 40px 40px;
+
+}
+
+div{
+   
+}
+.f-text
+{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+#antonio
+{
+    margin-top: 1.5rem;
+}
+
+#stephane
+{
+    margin-bottom: 1rem;
+}
 
 .nav{
  padding-top: 5px;
@@ -332,11 +383,7 @@ div
 }
 .section1
 {
-<<<<<<< HEAD
-margin-top: -5%;
-=======
-margin-top: 6.5% !important;
->>>>>>> branch 'master' of https://github.com/LeoPMD/Project_AutoEcole.git
+margin-top: 130px !important;
 }
 
 .imageVoiture{

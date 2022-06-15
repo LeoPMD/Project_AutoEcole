@@ -25,6 +25,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 
 
 
@@ -51,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
     AccueilComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    PresentationFormateursComponent
   ],
   imports: [
     BrowserModule,
