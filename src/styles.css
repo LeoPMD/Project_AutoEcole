@@ -21,7 +21,7 @@
   height:225px;
   border:2px solid rgb(254, 127, 45);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
-  margin: 2rem;
+  margin: rem;
 }
 
 .cercles{
@@ -332,7 +332,7 @@ div
 }
 .section1
 {
-margin-top: -2%;
+margin-top: -5%;
 }
 
 .imageVoiture{
