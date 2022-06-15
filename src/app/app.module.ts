@@ -23,6 +23,7 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 
 
 
@@ -46,7 +47,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ForfaitComponent,
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
-    AccueilComponent
+    AccueilComponent,
+    QuizCodeComponent,
 
   ],
   imports: [
