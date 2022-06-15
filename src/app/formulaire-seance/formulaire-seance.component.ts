@@ -23,9 +23,8 @@ export class FormulaireSeanceComponent implements OnInit {
       dateSeance:[null, [Validators.required]],
       heureDebutSeance:[null, [Validators.required]],
       heureFinSeance:[null, [Validators.required]],
-      vehicule:[null, [Validators.required]],
-      client:[null, [Validators.required]],
-      formateur:[null, [Validators.required]],
+      // vehicule:[null, [Validators.required]],
+      // formateur:[null, [Validators.required]],
       })
   }
 
