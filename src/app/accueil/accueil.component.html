@@ -1,34 +1,46 @@
 
-<p>accueil works!</p>
-
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">  
+</head>
+<!------------------------------------ header ------------------------------->
 <section class="section1">
   <div class="grid quelqueInfo" style="--bs-columns: 3;">
     <div class="permisChezNous">
-      <h3 class="Pourquoi">Pourquoi passer le permis chez nous</h3>
-      <p class="Pourquoi">Le permis de conduire est un droit administratif autorisant la <br> conduite sur une route publique  suite à un test d’aptitude à la  <br>conduite en fonction des lois locales.<br> Ainsi, l’obtention de ce permis de conduire est très capitale pour diverses raisons. </p>
+      <h1 class="pourquoi">Pourquoi passer le permis chez nous ?</h1>
+      <p class="Pourquoi">Le permis de conduire est un droit administratif autorisant la conduite sur une route publique  suite à un test d’aptitude à la conduite en fonction des lois locales.<br> Ainsi, l’obtention de ce permis de conduire est très capitale pour diverses raisons. </p>
     </div>
-    <div class="prix prixCode" routerLink="/forfait">
+    <div class="prix prixConduite" routerLink="/forfait">
+      <br><br>
       <h4>Code de la route</h4>
       <h5> à partir de : 1 €</h5>
     </div>
-    <div class="prix prixConduite" routerLink="/forfait">
-      <h4>Conduite</h4>
+    <div class="prix prixPermis" routerLink="/forfait">
+      <br><br>
+      <h4>Permis de conduire</h4>
       <h5> à partir de : 1 €</h5>
     </div>
   </div>
     <div class="voiture" style="--bs-columns: 3;">
-      <div class="imageVoiture">
+      <div class="imageVoiture"></div>
 
-      </div>
       <div class="prix prixCodeConduite" routerLink="/forfait">
-        <h4>Le permis</h4>
+        <h4>Code + Permis de conduire</h4>
         <h5> à partir de : 1 €</h5>
       </div>
-    </div>
+    </div>   
   </section>
-
-  <section>
+  <div>
+    <img class="fleche" src="https://joannieparent.com/wp-content/uploads/2019/08/fleche-double-angle-vers-le-bas-1.png" alt="fleche">
+  </div>
+<!------------------------------------ Moniteur a votre ecoute + carte  ------------------------------->
+  <section class="section2">
+    
+    <div class="Notch"><svg style="fill:#ffffff" viewBox="1 0 189 50"><path d="M94.5 49.193c19.422 0 34.571-7.818 45.448-23.455A60 60 0 01189.204 0H199-11-.204a60 60 0 0149.256 25.738C59.93 41.375 75.078 49.193 94.5 49.193z"></path></svg></div>
+    
     <div class="container">
+      <br><br>
       <div class="row">
         <div class="col"><img id="img1" src="https://le-cdn.website-editor.net/md/and1/dms3rep/multi/opt/120889-1920w.jpeg" alt="Image Moniteur Auto-Ecole"></div>
         <div class="col">
@@ -46,12 +58,15 @@
       </div>
     </div>
 
-    <h2 align="center">Statistiques</h2>
+    <br><br><br>
+<!------------------------------------ statistiques  ------------------------------->
+  
     <div class="cercles">
         <div class="moncercle">
           <p class="circle_text">Nombre d'élèves :</p>
           <p class="nombre">{{eleve$ | async}}</p>
         </div>
+      
         <div class="moncercle">
           <p class="circle_text">Nombre d'enseignants :</p>
           <p class="nombre">{{enseignant$ | async}}</p>
@@ -60,13 +75,42 @@
           <p class="circle_text">Taux de Réussite :</p>
           <p class="nombre">{{reussite$ | async}} %</p>
         </div>
-      </div>
+      </div>  <br><br><br>
   </section>
 
-<div>
-    <span>---------------------------------section commentaire/avis--------------------------------</span>
+  <br><br><br>  <br><br><br>
+<!------------------------------------ Code en ligne  ------------------------------->
+  <div class="container-infos">
+    <div class="informations_section--titre">
+        <h2 class="testclass">La formation du code en ligne :</h2>
+    </div>
+    <div class="informations_section--elements">
+        <div class="information_section--apprendre">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Apprentissage.</h3>
+            <p class="resize-text">29 examens blancs pour vous évaluer dans les mêmes conditions qu'à l’examen officiel.</p>
+        </div>
+        <div class="information_section--entrainement">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Entrainement</h3>
+            <p class="resize-text">5414 questions de Code pour vous entraîner librement.</p>
+        </div>
+        <div class="information_section--evaluation">
+            <a class="pointer" href="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp" target="_blank">
+                <img class="resize-image" src="https://www.auto-ecole.net/img/revision_2019/webp/apprentissage.webp">
+            </a>
+            <h3 class="spacing-title">Évaluation</h3>
+            <p class="resize-text">29 examens blancs pour vous évaluer dans les mêmes conditions qu'à l’examen officiel</p>
+        </div>
+    </div>
 </div>
 
+<br><br><br><br><br><br><br><br><br>
+<!------------------------------------ Avis-Commentaires ------------------------------->
  <section>
     <div id="avis">
         <div id="bulle-gauche">
@@ -86,8 +130,6 @@
          <div id="bulle-droite-haut">
             <div class="mb-4 texte-avis">Très bon service. C'est une auto-école qui offre une formation très complète avec des très bons outils pédagogiques. Les enseignants sont très bien formés dans leur domaine et très sympas!
                 </div>
-
-
 
                <div class="prenom-ville">
                 <div>
@@ -119,6 +161,10 @@
 
      <div class="test"><img src="https://www.pngplay.com/wp-content/uploads/7/Car-Transparent-Free-PNG.png" alt="voiture vert"  height="200"></div>
  </section>
+
+ 
+
+
 
 
 

@@ -18,7 +18,8 @@ export class SeanceConduiteService {
   
   ajoutSeance(seance:SeanceConduite):Observable<SeanceConduite>
   {
-   return this.httpClient.post<SeanceConduite>(environment.url + "saveSeance", seance)
+    console.log(seance)
+    return this.httpClient.post<SeanceConduite>(environment.url + "saveSeance", seance)
   }
 
   deleteSeance(id:number):Observable<void>
