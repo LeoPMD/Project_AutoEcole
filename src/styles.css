@@ -63,7 +63,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  
+
   margin: 10px 0;
 }
 
@@ -182,7 +182,7 @@ position: absolute;
 
 div
 {
-    
+
 }
 
 .pourquoi {
@@ -190,18 +190,18 @@ div
     font-size: 290%;
     text-align: left;
     color: red
-    
+
 }
 .Pourquoi
 {
     font-size: larger;
-    
+
 }
 .permisChezNous
 {
     margin-left: 5rem !important;
     width: 110rem;
-  
+
 }
 .texte-avis
 {
@@ -218,7 +218,7 @@ div
     align-items: center;
     flex-direction: column;
     vertical-align: middle
-    
+
 }
 @keyframes down{
 	0% {position:relative; top:0px; opacity: 0}
@@ -327,12 +327,12 @@ div
   padding-left: 20px;
   padding-right: 40px;
   border-radius: 60px 60px 60px 60px;
-  
-  
+
+
 }
 .section1
 {
-margin-top: -2%;
+margin-top: 6.5% !important;
 }
 
 .imageVoiture{
@@ -389,4 +389,54 @@ padding-left: 1%;
 
 .navText{
   color: rgba(0,0,0,1)!important;
+}
+
+.bd-sidebar {
+  grid-area: sidebar;
+  max-width: 10% !important;
+  background-color: rgb(248, 249, 250) !important;
+}
+
+.bd-main {
+  grid-area: main;
+  width: 90% !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.all{
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100% !important;
+}
+
+.afficheListe{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: rgba(254, 127, 45, 0.9);
+  color: rgb(0, 0, 0);
+  margin-right: 3.5%;
+  margin-left: 3.5%;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+  border-radius: 10px 10px 10px 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  padding-right:10px;
+  width: 50rem;
+}
+
+.flex1 {
+  flex-basis: auto;
+}
+
+.bouton{
+  display:flex;
 }

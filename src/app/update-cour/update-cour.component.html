@@ -2,14 +2,13 @@
 
 <div *ngIf="coursForm">
     <form [formGroup]="coursForm" (ngSubmit)="onUpdate()">
-        
+
         <label for="titre"> Id : </label>
         <input type="text" id="id" formControlName="id" [attr.disabled]="true" size="1">
 
         <label for="titre"> Titre : </label>
         <input type="text" id="titre" formControlName="titre">
-    
+
         <input type="submit" value="Valider">
     </form>
     </div>
-    
