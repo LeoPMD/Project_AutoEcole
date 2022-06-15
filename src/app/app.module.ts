@@ -24,6 +24,8 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
 import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -50,7 +52,6 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
     ModifierForfaitComponent,
     AccueilComponent,
     MenuAdminComponent
-
   ],
   imports: [
     BrowserModule,
@@ -58,7 +59,8 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent,MenuAdminComponent]
