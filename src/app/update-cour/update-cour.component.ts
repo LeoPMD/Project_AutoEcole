@@ -14,7 +14,7 @@ export class UpdateCourComponent implements OnInit {
   id!:number
   form: any;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private coursCodeService: CoursCodeService, private activatedRoute: ActivatedRoute) { 
+  constructor(private formBuilder: FormBuilder, private router: Router, private coursCodeService: CoursCodeService, private activatedRoute: ActivatedRoute) {
   this.id= activatedRoute.snapshot.params['id']
 }
   ngOnInit(): void {
