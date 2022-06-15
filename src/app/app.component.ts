@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Project_AutoEcole';
   collapsed = true;
-  isAdmin = true;
+  isAdmin = false;
+  admin = false;
 
 mySubscription;
 
