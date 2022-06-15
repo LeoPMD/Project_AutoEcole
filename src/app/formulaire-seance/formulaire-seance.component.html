@@ -6,25 +6,20 @@
     <input type="date" id="dateSeance" formControlName="dateSeance">
     <br>
     <label for="heureDebutSeance"> Heure de début de la séance :  </label>
-    <input type="time" id="heureDebutSeance" formControlName="heureDebutSeance">
+    <input type="time" step="2" id="heureDebutSeance" formControlName="heureDebutSeance">
     <br>
     <label for="heureFinSeance"> Heure de fin de la séance :  </label>
-    <input type="time" id="heureFinSeance" formControlName="heureFinSeance">
+    <input type="time" step="2" id="heureFinSeance" formControlName="heureFinSeance">
     <br>
     <label for="vehicule"> Vehicule : </label>
     <select id="vehicule" formControlName="vehicule">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.vehicule.marque}}</option>  
+        <option *ngFor="let lv of listeVehicules$ | async">{{lv}}</option>  
     </select>
     <br>
-    <label for="client"> Client : </label>
-    <select id="client" formControlName="client">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.client.nom}}</option>  
-    </select>
-    <br>
-    <label for="formateur"> Formateur : </label>
+    <!-- <label for="formateur"> Formateur : </label>
     <select id="formateur" formControlName="formateur">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.formateur.prenom}}</option>  
-    </select>
+        <option *ngFor="let lc of listeSeances$ | async">{{formateur.id}}</option>  
+    </select>  -->
 <br>
     <input type="submit" value="Envoyer">
 </form>

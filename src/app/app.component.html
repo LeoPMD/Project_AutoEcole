@@ -1,125 +1,133 @@
-<html *ngIf="!isAdmin; then normal; else admin">
+<body *ngIf="!isAdmin; then normal; else admin">
 
-</html>
+</body>
 <ng-template #normal>
-  <html *ngIf="!isAdmin">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid nav">
-      <a class="navbar-brand logo" routerLink="/accueil"></a>
-      <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
-        aria-label="Toggle navigation" (click)="collapsed = !collapsed">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link navText">Code</a>
-          </li>
 
-          <div class="navbar-collapse " id="navbarContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item" ngbDropdown>
-                <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
-                  Session de conduite
-                </a>
-                <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                  <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">S'inscrire</a>
-                  <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateur</a>
-                  <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Vehicule</a>
-                </div>
+  <body *ngIf="!isAdmin">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid nav">
+          <a class="navbar-brand logo" routerLink="/accueil"></a>
+          <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+            aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link navText">Code</a>
+              </li>
+
+              <div class="navbar-collapse " id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item" ngbDropdown>
+                    <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                      Session de conduite
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                      <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">S'inscrire</a>
+                      <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateur</a>
+                      <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Vehicule</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item" ngbDropdown>
+                    <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                      Forfaits
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                      <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Code</a>
+                      <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Conduite</a>
+                      <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Permis</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Stage de recupération du permis</a>
+                  </li>
+                </ul>
+              </div>
+
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
               </li>
             </ul>
+            <button *ngIf="admin" class="btn btn-outline-success" (click)="isAdmin = !isAdmin"
+              routerLink="/menuadmin">Menu
+              Admin</button>
+            <form class="d-flex">
+              <button class="btn btn-outline-success" type="submit">Se connecter</button>
+            </form>
           </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
 
+  </body>
+</ng-template>
+<ng-template #admin>
 
-          <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item" ngbDropdown>
-                <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
-                  Forfaits
-                </a>
+  <body>
+    <ul class="all">
+      <div class="bd-sidebar">
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <a class="navbar-brand logo" routerLink="/accueil"></a>
+              <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Afficher
+                  Liste</a>
                 <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                  <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Code</a>
-                  <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Conduite</a>
-                  <a ngbDropdownItem routerLink="/forfait" (click)="$event.preventDefault()">Permis</a>
+                  <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateurs</a>
+                  <a ngbDropdownItem routerLink="/client" (click)="$event.preventDefault()">Elèves</a>
+                  <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Voitures</a>
+                  <a ngbDropdownItem routerLink="/CoursCode" (click)="$event.preventDefault()">Cours</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Ajouter
+                  Element</a>
+                <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                  <a ngbDropdownItem routerLink="/ajouterFormateur" (click)="$event.preventDefault()">Ajouter
+                    Formateur</a>
+                  <a ngbDropdownItem routerLink="/ajouterClient" (click)="$event.preventDefault()">Ajouter Elève</a>
+                  <a ngbDropdownItem routerLink="/enrVehicule" (click)="$event.preventDefault()">Ajouter Voiture</a>
+                  <a ngbDropdownItem routerLink="/addCours" (click)="$event.preventDefault()">Ajouter Cours</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Stage de recupération du permis</a>
+                <a class="nav-link navText" routerLink="/forfait">Gestion Forfait</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link navText" routerLink="/ajouterForfait">Ajouter Forfait</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText" routerLink="/menuadmin">Accueil Gestion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText" routerLink="/accueil" (click)="isAdmin = !isAdmin">Accueil</a>
+              </li>
+              <form class="d-flex">
+                <button class="btn btn-outline-success" type="submit">
+                  Déconnexion
+                </button>
+              </form>
             </ul>
           </div>
-
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contact</a>
-          </li>
-        </ul>
-        <button *ngIf="admin" class="btn btn-outline-success" (click)="isAdmin = !isAdmin" routerLink="/menuadmin">Menu Admin</button>
-        <form class="d-flex">
-          <button class="btn btn-outline-success" type="submit">Se connecter</button>
-        </form>
+        </nav>
       </div>
-    </div>
-  </nav>
-  <router-outlet></router-outlet>
+      <div class="bd-main">
+        <router-outlet></router-outlet>
+      </div>
+    </ul>
 
-  </html>
-</ng-template>
-<ng-template #admin>
-  <html>
-  <ul class="all">
-    <div class="bd-sidebar">
-      <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <a class="navbar-brand logo" routerLink="/accueil"></a>
-            <li class="nav-item dropdown" ngbDropdown>
-              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Afficher
-                Liste</a>
-              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                <a ngbDropdownItem routerLink="/formateur" (click)="$event.preventDefault()">Formateurs</a>
-                <a ngbDropdownItem routerLink="/client" (click)="$event.preventDefault()">Elèves</a>
-                <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Voitures</a>
-                <a ngbDropdownItem routerLink="/CoursCode" (click)="$event.preventDefault()">Cours</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown" ngbDropdown>
-              <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Ajouter
-                Element</a>
-              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                <a ngbDropdownItem routerLink="/ajouterFormateur" (click)="$event.preventDefault()">Ajouter
-                  Formateur</a>
-                <a ngbDropdownItem routerLink="/ajouterClient" (click)="$event.preventDefault()">Ajouter Elève</a>
-                <a ngbDropdownItem routerLink="/enrVehicule" (click)="$event.preventDefault()">Ajouter Voiture</a>
-                <a ngbDropdownItem routerLink="/addCours" (click)="$event.preventDefault()">Ajouter Cours</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navText" routerLink="/forfait">Gestion Forfait</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navText" routerLink="/ajouterForfait">Ajouter Forfait</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navText" routerLink="/menuadmin">Accueil Gestion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navText" routerLink="/accueil" (click)="isAdmin = !isAdmin">Accueil</a>
-            </li>
-            <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">
-                Déconnexion
-              </button>
-            </form>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="bd-main">
-      <router-outlet></router-outlet>
-    </div>
-  </ul>
-
-  </html>
+  </body>
 </ng-template>
