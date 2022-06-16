@@ -27,6 +27,7 @@ import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.co
 import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -55,7 +56,8 @@ const routes: Routes = [
   {path:"presentationFormateur", component: PresentationFormateursComponent},
   {path: "forfaitClient", component: ForfaitClientComponent},
   {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
-  {path:"menuadmin",component:MenuAdminComponent}
+  {path:"menuadmin",component:MenuAdminComponent},
+  {path:"login",component:LoginComponent}
 
 
 ];
