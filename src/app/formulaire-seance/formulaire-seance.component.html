@@ -25,6 +25,11 @@
       <option *ngFor="let lf of listeFormateurs$ | async">{{lf.nom}}</option>
     </datalist>
     <br>
+    <label for="client"> Client : </label>
+    <input type="text" id="client" formControlName="client" list="clients" />
+    <datalist id="clients">
+      <option *ngFor="let lc of listeClients$ | async">{{lc.nom}}</option>
+    </datalist>
   </form>
   <br>
   <input type="submit" value="Envoyer">
