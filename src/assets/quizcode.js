@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "Première question",
+        question: "Ceci est ma Première question",
         a:"Réponse a",
         b:"Réponse b",
         c:"Réponse c",
@@ -35,7 +35,7 @@ const quizData = [
 ];
 
 const quiz=document.getElementById('quiz')
-const reponseEl = document.querySelectorAll('.reponse')
+const reponseEls = document.querySelectorAll('.reponse') // "Els" signifie "list"
 const questionEl=document.getElementById('question')
 
 const a_text=document.getElementById('a_text')
@@ -65,7 +65,7 @@ function loadQuiz(){
 }
 
 function deselectAnswers() {
-    reponseEls.forEach(reponsesEl => reponsesEl.checked = false)
+    reponseEls.forEach(reponseEl => reponseEl.checked = false)
 }
 
 function getSelected() {
@@ -90,9 +90,13 @@ submitBtn.addEventListener('click', () => {
         if(currentQuiz < quizData.length) {
             loadQuiz() 
         } else {
-            quiz.innerHTML = `<h2>Tu as répondu a ${score}/${quizData.lenght} questions correctement</h2>
+            quiz.innerHTML = `
+			<h2>Tu as répondu a ${score}/${quizData.lenght} questions correctement</h2>
             
-            <button onclick="location.reload()">Reload</button>`
+            <button onclick="location.reload()">Reload</button>
+			`
         }
     }
-})
+}
+
+)
