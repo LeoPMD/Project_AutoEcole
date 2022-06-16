@@ -29,6 +29,7 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 import { ForfaitClientComponent } from './forfait-client/forfait-client.component';
 import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
@@ -65,6 +66,7 @@ import { PresentationVehiculesComponent } from './presentation-vehicules/present
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
     AccueilComponent,
+    QuizCodeComponent,
 
     MenuAdminComponent,
     PresentationFormateursComponent,

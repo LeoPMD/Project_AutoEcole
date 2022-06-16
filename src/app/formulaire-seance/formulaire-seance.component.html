@@ -14,17 +14,22 @@
   </form>
   <form [formGroup]="otherForm">
     <label for="vehicule"> Vehicule : </label>
-    <input type="number" id="vehicule" formControlName="vehicule" list="vehicules" />
+    <input type="text" id="vehicule" formControlName="vehicule" list="vehicules" />
     <datalist id="vehicules">
-      <option *ngFor="let lv of listeVehicules$ | async">{{lv.id}}</option>
+      <option *ngFor="let lv of listeVehicules$ | async">{{lv.plaqueImmatriculation}}</option>
     </datalist>
     <br>
     <label for="formateur"> Formateur : </label>
-    <input type="number" id="formateur" formControlName="formateur" list="formateurs" />
+    <input type="text" id="formateur" formControlName="formateur" list="formateurs" />
     <datalist id="formateurs">
-      <option *ngFor="let lf of listeFormateurs$ | async">{{lf.id}}</option>
+      <option *ngFor="let lf of listeFormateurs$ | async">{{lf.nom}}</option>
     </datalist>
     <br>
+    <label for="client"> Client : </label>
+    <input type="text" id="client" formControlName="client" list="clients" />
+    <datalist id="clients">
+      <option *ngFor="let lc of listeClients$ | async">{{lc.nom}}</option>
+    </datalist>
   </form>
   <br>
   <input type="submit" value="Envoyer">

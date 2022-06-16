@@ -24,6 +24,7 @@ import { FormulaireSeanceComponent } from './formulaire-seance/formulaire-seance
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
+import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path:"forfait",component:ForfaitComponent},
   {path:"ajouterForfait",component:FormulaireForfaitComponent},
   {path:"modifierForfait/:id",component:ModifierForfaitComponent},
+  {path:"quizCode",component:QuizCodeComponent},
   {path:"menuadmin",component:MenuAdminComponent},
   {path:"presentationFormateur", component: PresentationFormateursComponent},
   {path: "forfaitClient", component: ForfaitClientComponent},

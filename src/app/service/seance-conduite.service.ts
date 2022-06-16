@@ -40,9 +40,9 @@ export class SeanceConduiteService {
 
   }
 
-  associerSeance(seance:SeanceConduite,idVehicule:number,idFormateur:number):Observable<SeanceConduite>
+  associerSeance(seance:SeanceConduite,idVehicule:string,idFormateur:string,nomClient:string):Observable<SeanceConduite>
   {
-    return this.httpClient.post<SeanceConduite>(environment.url + "associerSeance/" + idVehicule +"/" + idFormateur, seance)
+    return this.httpClient.post<SeanceConduite>(environment.url + "associerSeance/" + idVehicule +"/" + idFormateur + "/" + nomClient, seance)
   }
 
 }

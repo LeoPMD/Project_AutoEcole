@@ -15,24 +15,25 @@
           <div class="collapse navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link navText">Code</a>
+                <a class="nav-link navText" routerLink="/quizCode">QuizCode</a>
               </li>
-
 
         <li class="nav-item">
           <a class="nav-link navText" routerLink="/forfaitClient" >Tarifs</a>
         </li>
 
-        <div class="navbar-collapse "  id="navbarContent">
+        <div class="navbar-collapse " id="navbarContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item" ngbDropdown>
               <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
                 Session de conduite
               </a>
               <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">S'inscrire</a>
-                <a ngbDropdownItem routerLink="/presentationFormateur" (click)="$event.preventDefault()">Formateur</a>
-                <a ngbDropdownItem routerLink="/presentationVehicule" (click)="$event.preventDefault()">Vehicule</a>
+
+                <a ngbDropdownItem routerLink="/addSeance" (click)="$event.preventDefault()">Reserver une séance</a>
+                <a ngbDropdownItem routerLink="/presentationFormateur" (click)="$event.preventDefault()">Les formateur</a>
+                <a ngbDropdownItem routerLink="/presentationVehicule" (click)="$event.preventDefault()">Nos véhicule</a>
+
               </div>
             </li>
           </ul>
@@ -40,10 +41,6 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="https://www.permisapoints.fr/?gclid=CjwKCAjwqauVBhBGEiwAXOepkUHjzo4hkvuVNtRwIolvZrg5RrBtOCJQYQGK-VvjlzWfNbU0w1esBBoCqD0QAvD_BwE">Stage de recupération du permis</a>
             </li>
-
-
-
-
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Contact</a>
               </li>
