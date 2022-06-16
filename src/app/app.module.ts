@@ -33,6 +33,7 @@ import { ForfaitClientComponent } from './forfait-client/forfait-client.componen
 import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 
 @NgModule({
   declarations: [
@@ -59,9 +60,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
     AccueilComponent,
+
+    MenuAdminComponent,
+    PresentationFormateursComponent,
+
     ForfaitClientComponent,
     FormulaireCLientForfaitComponent,
     MenuAdminComponent
+
   ],
   imports: [
     BrowserModule,

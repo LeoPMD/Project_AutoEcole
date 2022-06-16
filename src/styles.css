@@ -21,7 +21,7 @@
   height:225px;
   border:2px solid rgb(254, 127, 45);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
-  margin: 2rem;
+  margin: 3rem;
 }
 
 .cercles{
@@ -106,7 +106,7 @@
     width: 100%;
     padding: 3rem 3rem 3rem;
     box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
-    background-color:rgb(87, 204, 153);
+    background: linear-gradient(rgba(97, 155, 138), rgba(87, 204, 153));
     color: white;
     border-radius: 60px 60px 60px;
     height: 100%;
@@ -147,6 +147,7 @@ margin-left: 4rem;
 max-width: 1365px;
 margin-right: auto;
 margin-left: auto;
+
 }
 
 
@@ -154,12 +155,14 @@ margin-left: auto;
 {
    margin-right: 3rem;
    padding-bottom: 1.5rem;
+   
 }
 
 
 #bulle-droite-haut
 {
     margin-bottom: 1cm;
+    
 }
 
 
@@ -185,7 +188,8 @@ position: absolute;
     font-family: 'Just Another Hand', cursive;
     font-size: 290%;
     text-align: left;
-    color: red
+    color: red;
+    margin-top: 10px
 
 }
 .Pourquoi
@@ -197,7 +201,7 @@ position: absolute;
 {
     margin-left: 5rem !important;
     width: 110rem;
-
+ 
 }
 .texte-avis
 {
@@ -250,6 +254,86 @@ position: absolute;
     width: 10%;
     margin-right: auto;
     margin-left: auto;
+}
+
+.titremono
+{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 50px;
+    color: red;
+    margin-top: 5px;
+    margin-bottom: -4px;
+
+}
+
+.formateurs-image-text
+{
+display: flex;
+align-items: center;
+font-size: 30px;
+line-height: 30px ;
+color:rgb(0, 0, 0);
+margin-bottom: 4rem;
+max-width: 1250px!important;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+font-family: 'Just Another Hand', cursive;
+
+}
+
+.formateurs-image
+{
+   width: 450px;
+   height: 270px;
+   object-fit: cover;
+   border-radius: 40px 40px 40px 40px;
+
+}
+
+.f-text
+{   
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-right:4rem;
+    margin-left:4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    height: 200px;
+    align-items: center;
+    min-width: 670px;
+
+    
+}
+div
+
+
+.f-text:before {
+	content: "";
+    z-index: -2;  /*valeur negative pour forcer la couche à se mettre en dessous */
+	background-image: url("https://www.mpadeco.com/resize/500x500/zc/3/f/0/src/sites/mpadeco/files/products/27c4628687f9ad12062eb371055f8ee2.png");
+    border-radius: 20px 20px 20px 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+	opacity: 0.1;  
+    
+   
+}
+
+
+#antonio
+{
+    margin-top: 1.5rem;
+}
+
+#stephane
+{
+
+    margin-bottom: 1rem;
 }
 
 
@@ -328,7 +412,9 @@ position: absolute;
 }
 .section1
 {
-margin-top: 6.5% !important;
+
+margin-top: 120px !important;
+
 }
 
 .imageVoiture{
