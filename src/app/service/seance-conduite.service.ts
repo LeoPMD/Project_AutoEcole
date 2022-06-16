@@ -19,7 +19,7 @@ export class SeanceConduiteService {
 
   ajoutSeance(seance:SeanceConduite):Observable<SeanceConduite>
   {
-    console.log(seance)
+    console.log(seance.vehicule)
     return this.httpClient.post<SeanceConduite>(environment.url + "saveSeance", seance)
   }
 
@@ -40,9 +40,9 @@ export class SeanceConduiteService {
 
   }
 
-  associationFormateurToSessionConduite(id:number, formateur:Formateur): Observable<SeanceConduite>
+  associerSeance(seance:SeanceConduite,idVehicule:number,idFormateur:number):Observable<SeanceConduite>
   {
-    return this.httpClient.put<SeanceConduite>(environment.url + "assosierFormateurSessionConduite/" + id, formateur)
+    return this.httpClient.post<SeanceConduite>(environment.url + "associerSeance/" + idVehicule +"/" + idFormateur, seance)
   }
 
 }

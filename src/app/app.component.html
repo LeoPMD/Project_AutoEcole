@@ -71,7 +71,7 @@
         <nav class="navbar bg-light">
           <div class="container-fluid">
             <ul class="navbar-nav">
-              <a class="navbar-brand logo" routerLink="/accueil"></a>
+              <a class="navbar-brand logo" routerLink="/accueil" (click)="isAdmin = !isAdmin"></a>
               <li class="nav-item dropdown" ngbDropdown>
                 <a class="nav-link navText" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Afficher
                   Liste</a>
