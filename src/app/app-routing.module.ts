@@ -1,3 +1,5 @@
+import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
+import { ForfaitClientComponent } from './forfait-client/forfait-client.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AppComponent } from './app.component';
 
@@ -23,6 +25,9 @@ import { ModifierClientComponent } from './modifier-client/modifier-client.compo
 import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { QuizCodeComponent } from './quiz-code/quiz-code.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
+
 
 
 const routes: Routes = [
@@ -45,7 +50,12 @@ const routes: Routes = [
   {path:"forfait",component:ForfaitComponent},
   {path:"ajouterForfait",component:FormulaireForfaitComponent},
   {path:"modifierForfait/:id",component:ModifierForfaitComponent},
-  {path:"quizCode",component:QuizCodeComponent}
+  {path:"quizCode",component:QuizCodeComponent},
+  {path:"menuadmin",component:MenuAdminComponent},
+  {path:"presentationFormateur", component: PresentationFormateursComponent},
+  {path: "forfaitClient", component: ForfaitClientComponent},
+  {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
+  {path:"menuadmin",component:MenuAdminComponent}
 
 
 ];

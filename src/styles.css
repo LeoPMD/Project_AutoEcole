@@ -3,11 +3,15 @@
 #img1 {
   height: 80%;
   width: 80%;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 #img2 {
   height: 100%;
   width: 100%;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .moncercle{
@@ -15,8 +19,9 @@
   border-radius:50%;
   width:225px;
   height:225px;
-  border:2px solid cyan;
-  box-shadow: 0 15px 30px 0 rgb(76 76 221 / 23%);
+  border:2px solid rgb(254, 127, 45);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
+  margin: 3rem;
 }
 
 .cercles{
@@ -34,7 +39,7 @@
  .nombre {
   font-size: 1.5cm;
   font-weight: bold;
-  color: blue;
+  color: rgb(252, 202, 70);
  }
 /* class réutilisables */
 .resize-image {
@@ -58,8 +63,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
-  border-top: 2px dashed #333;
-  border-bottom: 2px dashed #333;
+
   margin: 10px 0;
 }
 
@@ -102,7 +106,7 @@
     width: 100%;
     padding: 3rem 3rem 3rem;
     box-shadow: 0 10px 30px 0 rgb(56 0 153 / 30%);
-    background-color:rgb(87, 204, 153);
+    background: linear-gradient(rgba(97, 155, 138), rgba(87, 204, 153));
     color: white;
     border-radius: 60px 60px 60px;
     height: 100%;
@@ -143,6 +147,7 @@ margin-left: 4rem;
 max-width: 1365px;
 margin-right: auto;
 margin-left: auto;
+
 }
 
 
@@ -150,12 +155,14 @@ margin-left: auto;
 {
    margin-right: 3rem;
    padding-bottom: 1.5rem;
+   
 }
 
 
 #bulle-droite-haut
 {
     margin-bottom: 1cm;
+    
 }
 
 
@@ -176,13 +183,42 @@ position: absolute;
     to {left: 100%;}
 }
 
+.pourquoi{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 290%;
+    text-align: left;
+    color: red;
+    margin-top: 10px
+
+}
+.Pourquoi
+{
+    font-size: larger;
+
+}
+.permisChezNous
+{
+    margin-left: 5rem !important;
+    width: 110rem;
+ 
+}
 .texte-avis
 {
     font-size:1.5rem;
-
 }
 
+.prix
+{
+    width: 30%;
+    padding: 3rem 3rem 3rem;
+    background-color:rgb(254, 127, 45);
+    color: white;
+    border-radius: 60px 60px 60px;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle
 
+}
 @keyframes down{
 	0% {position:relative; top:0px; opacity: 0}
 	50% {position:relative; top:15px; opacity: 0.5}
@@ -196,6 +232,107 @@ position: absolute;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+}
+
+.section2
+{
+    background-color: rgba(106, 224, 21, 0.362);
+    background: linear-gradient(rgba(252, 202, 70, 0.9), rgba(97, 155, 138));
+    border-radius: 60px 60px 30px 30px;
+}
+.Notch
+{
+    display: flex;
+    width: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titremono
+{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 50px;
+    color: red;
+    margin-top: 5px;
+    margin-bottom: -4px;
+
+}
+
+.formateurs-image-text
+{
+display: flex;
+align-items: center;
+font-size: 30px;
+line-height: 30px ;
+color:rgb(0, 0, 0);
+margin-bottom: 4rem;
+max-width: 1250px!important;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+font-family: 'Just Another Hand', cursive;
+
+}
+
+.formateurs-image
+{
+   width: 450px;
+   height: 270px;
+   object-fit: cover;
+   border-radius: 40px 40px 40px 40px;
+
+}
+
+.f-text
+{   
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-right:4rem;
+    margin-left:4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    height: 200px;
+    align-items: center;
+    min-width: 670px;
+
+    
+}
+div
+
+
+.f-text:before {
+	content: "";
+    z-index: -2;  /*valeur negative pour forcer la couche à se mettre en dessous */
+	background-image: url("https://www.mpadeco.com/resize/500x500/zc/3/f/0/src/sites/mpadeco/files/products/27c4628687f9ad12062eb371055f8ee2.png");
+    border-radius: 20px 20px 20px 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+	opacity: 0.1;  
+    
+   
+}
+
+
+#antonio
+{
+    margin-top: 1.5rem;
+}
+
+#stephane
+{
+
+    margin-bottom: 1rem;
 }
 
 
@@ -207,9 +344,7 @@ position: absolute;
  background-color: white;
 }
 
-.Pourquoi{
-  font-family: cursive;
-}
+
 
 .quelqueInfo{
 
@@ -228,7 +363,6 @@ position: absolute;
   flex-direction: row;
   margin-left: 4%;
   margin-right: 20%;
-  border: 1px solid black;
   border-radius: 60px 60px 60px 60px;
   padding-top: 20px;
   padding-left: 20px;
@@ -236,46 +370,61 @@ position: absolute;
 }
 
 .prixConduite{
-  font-family: Georgia, serif;
   text-align: center;
-  background-color: rgb(64, 64, 187);
-  color: white;
-  margin-right: 10%;
-  border: 1px solid black;
-  border-radius: 60px 60px 60px 60px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(254, 127, 45, 0.9);
+  color: rgb(0, 0, 0);
+  margin-right: 7%;
+  border-radius: 10px 10px 10px 10px;
   padding-top: 5px;
-  padding-left: 20px;
-  padding-right: 30px;
+  width: 50rem;
+  margin-bottom: -10%;
+  margin-left: -10%;
 }
 
+.prixPermis{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: rgba(254, 127, 45, 0.9);
+    color: rgb(0, 0, 0);
+    margin-right: 7%;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 5px;
+    width: 50rem;
+    margin-bottom: -10%;
+
+  }
+
 .prixCode{
-  font-family: Georgia, serif;
   text-align: center;
-  background-color: rgb(64, 64, 187);
-  color: white;
+  background-color: rgb(254, 127, 45, 0.9);
+  color: rgb(0, 0, 0);
   margin-right: 10%;
   padding-top: 5px;
   padding-left: 20px;
   padding-right: 40px;
-  border: 1px solid black;
   border-radius: 60px 60px 60px 60px;
+
+
 }
-.section1{
-  background-color: white;
-  border-style: outset;
-  padding-bottom: 50px;
-  border-radius: 0px 0px 30% 30%;
+.section1
+{
+
+margin-top: 120px !important;
+
 }
 
 .imageVoiture{
   background: url("https://www.aircar.ma/img/car/large/65.png");
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50%;
-  height: 300px;
-  margin: 5%;
+  height: 400px;
+  margin-top: 0px;
+  padding-top: 10%;
 }
 
 .prix:hover{
@@ -309,16 +458,14 @@ padding-left: 1%;
 }
 
 .prixCodeConduite{
-  font-family: Georgia, serif;
   text-align: center;
-  background-color: rgb(64, 64, 187);
-  color: white;
-  margin-right: 10%;
-  margin-top: -20%;
-  padding-left: 20px;
+  background-color: rgb(252, 202, 70, 0.9);
+  color: rgb(0, 0, 0);
+  margin-right: 7%;
+  margin-top: -10%;
+
   padding-right: 40px;
-  border: 1px solid black;
-  border-radius: 60px 60px 60px 60px;
+  border-radius:10px 10px 10px 10px;
 }
 
 .navText{
@@ -401,4 +548,64 @@ padding-left: 1%;
 .quiz-container > button:focus {
   outline: none;
   background-color: #FCCA46;
+}
+
+.enteteTableClientForfait{
+  background-color: #333 !important;
+  color: white;
+}
+
+.tabClientForfait{
+width: 50%;
+margin-left: 30%;
+}
+
+.bd-sidebar {
+  grid-area: sidebar;
+  max-width: 10% !important;
+  background-color: rgb(248, 249, 250) !important;
+}
+
+.bd-main {
+  grid-area: main;
+  width: 90% !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.all{
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100% !important;
+}
+
+.afficheListe{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: rgba(254, 127, 45, 0.9);
+  color: rgb(0, 0, 0);
+  margin-right: 3.5%;
+  margin-left: 3.5%;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+  border-radius: 10px 10px 10px 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  padding-right:10px;
+  width: 50rem;
+}
+
+.flex1 {
+  flex-basis: auto;
+}
+
+.bouton{
+  display:flex;
 }

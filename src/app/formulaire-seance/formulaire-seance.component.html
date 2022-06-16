@@ -1,30 +1,36 @@
 <p>formulaire-seance works!</p>
 
-<form [formGroup]="seanceForm" (ngSubmit)="onSave()">
-
-    <label for="dateSeance"> Date de la séance :  </label>
+<form (ngSubmit)="onSave()">
+  <form [formGroup]="seanceForm">
+    <label for="dateSeance"> Date de la séance : </label>
     <input type="date" id="dateSeance" formControlName="dateSeance">
     <br>
-    <label for="heureDebutSeance"> Heure de début de la séance :  </label>
-    <input type="time" id="heureDebutSeance" formControlName="heureDebutSeance">
+    <label for="heureDebutSeance"> Heure de début de la séance : </label>
+    <input type="time" step="2" id="heureDebutSeance" formControlName="heureDebutSeance">
     <br>
-    <label for="heureFinSeance"> Heure de fin de la séance :  </label>
-    <input type="time" id="heureFinSeance" formControlName="heureFinSeance">
+    <label for="heureFinSeance"> Heure de fin de la séance : </label>
+    <input type="time" step="2" id="heureFinSeance" formControlName="heureFinSeance">
     <br>
+  </form>
+  <form [formGroup]="otherForm">
     <label for="vehicule"> Vehicule : </label>
-    <select id="vehicule" formControlName="vehicule">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.vehicule.marque}}</option>  
-    </select>
-    <br>
-    <label for="client"> Client : </label>
-    <select id="client" formControlName="client">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.client.nom}}</option>  
-    </select>
+    <input type="text" id="vehicule" formControlName="vehicule" list="vehicules" />
+    <datalist id="vehicules">
+      <option *ngFor="let lv of listeVehicules$ | async">{{lv.plaqueImmatriculation}}</option>
+    </datalist>
     <br>
     <label for="formateur"> Formateur : </label>
-    <select id="formateur" formControlName="formateur">  
-        <option *ngFor="let lc of listeSeances$ | async">{{lc.formateur.prenom}}</option>  
-    </select>
-<br>
-    <input type="submit" value="Envoyer">
+    <input type="text" id="formateur" formControlName="formateur" list="formateurs" />
+    <datalist id="formateurs">
+      <option *ngFor="let lf of listeFormateurs$ | async">{{lf.nom}}</option>
+    </datalist>
+    <br>
+    <label for="client"> Client : </label>
+    <input type="text" id="client" formControlName="client" list="clients" />
+    <datalist id="clients">
+      <option *ngFor="let lc of listeClients$ | async">{{lc.nom}}</option>
+    </datalist>
+  </form>
+  <br>
+  <input type="submit" value="Envoyer">
 </form>
