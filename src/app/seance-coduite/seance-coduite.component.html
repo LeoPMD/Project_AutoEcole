@@ -8,7 +8,6 @@
         <th scope="col">Heure début</th>
         <th scope="col">Heure fin</th>
         <th scope="col">Vehicule</th>
-        <th scope="col">Client</th>
         <th scope="col">Formateur</th>
         <th scope="col">Modifier/Supprimer</th>
       </tr>
@@ -20,9 +19,9 @@
         <td>{{lc.heureDebutSeance}}</td>
         <td>{{lc.heureFinSeance}}</td>
         <td>{{lc.vehicule.marque}}</td>
-        <td>{{lc.client.nom}}</td>
         <td>{{lc.formateur.prenom}}</td>
         <td><button>Modifier</button>
+            <button routeurLink="">Ajouter Formateur</button>
            <button >Supprimer</button></td>
       </tr>
     </tbody>

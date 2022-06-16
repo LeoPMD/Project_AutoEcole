@@ -1,3 +1,4 @@
+import { Formateur } from './../model/formateur.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -37,6 +38,11 @@ export class SeanceConduiteService {
   {
    return this.httpClient.get<SeanceConduite>(environment.url + "SeanceConduite/" + id)
 
+  }
+
+  associationFormateurToSessionConduite(id:number, formateur:Formateur): Observable<SeanceConduite>
+  {
+    return this.httpClient.put<SeanceConduite>(environment.url + "assosierFormateurSessionConduite/" + id, formateur)
   }
 
 }
