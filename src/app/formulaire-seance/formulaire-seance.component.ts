@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Formateur } from '../model/formateur.model';
 import { SeanceConduite } from '../model/seance-conduite.model';
 import { Vehicule } from '../model/vehicule.model';
