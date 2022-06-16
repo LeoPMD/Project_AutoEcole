@@ -31,6 +31,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ForfaitClientComponent } from './forfait-client/forfait-client.component';
 import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 
 @NgModule({
@@ -59,8 +64,8 @@ import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/fo
     ModifierForfaitComponent,
     AccueilComponent,
     ForfaitClientComponent,
-    FormulaireCLientForfaitComponent
-
+    FormulaireCLientForfaitComponent,
+    MenuAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,8 @@ import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/fo
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,6 +24,8 @@ import { FormulaireSeanceComponent } from './formulaire-seance/formulaire-seance
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+
 
 
 const routes: Routes = [
@@ -47,7 +49,8 @@ const routes: Routes = [
   {path:"ajouterForfait",component:FormulaireForfaitComponent},
   {path:"modifierForfait/:id",component:ModifierForfaitComponent},
   {path: "forfaitClient", component: ForfaitClientComponent},
-  {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent}
+  {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
+  {path:"menuadmin",component:MenuAdminComponent}
 
 
 ];
