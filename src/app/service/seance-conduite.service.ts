@@ -15,10 +15,10 @@ export class SeanceConduiteService {
   {
     return this.httpClient.get<SeanceConduite[]>(environment.url + "SeanceConduite")
   }
-  
+
   ajoutSeance(seance:SeanceConduite):Observable<SeanceConduite>
   {
-    console.log(seance)
+    console.log(seance.vehicule)
     return this.httpClient.post<SeanceConduite>(environment.url + "saveSeance", seance)
   }
 
@@ -37,6 +37,11 @@ export class SeanceConduiteService {
   {
    return this.httpClient.get<SeanceConduite>(environment.url + "SeanceConduite/" + id)
 
+  }
+
+  associerSeance(seance:SeanceConduite,idVehicule:number,idFormateur:number):Observable<SeanceConduite>
+  {
+    return this.httpClient.post<SeanceConduite>(environment.url + "associerSeance/" + idVehicule +"/" + idFormateur, seance)
   }
 
 }
