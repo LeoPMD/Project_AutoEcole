@@ -34,10 +34,6 @@ import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/fo
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
