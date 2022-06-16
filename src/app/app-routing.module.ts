@@ -26,6 +26,7 @@ import { FormulaireClientComponent } from './formulaire-client/formulaire-client
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
+import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
 
 
 
@@ -53,8 +54,8 @@ const routes: Routes = [
   {path:"presentationFormateur", component: PresentationFormateursComponent},
   {path: "forfaitClient", component: ForfaitClientComponent},
   {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
-  {path:"menuadmin",component:MenuAdminComponent}
-
+  {path:"menuadmin",component:MenuAdminComponent},
+  {path:"presentationVehicule", component: PresentationVehiculesComponent}
 
 ];
 
