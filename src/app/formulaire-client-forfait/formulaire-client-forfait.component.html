@@ -1,6 +1,7 @@
+<br><br>
 
-
-<form [formGroup]="formFormateurAdd" (ngSubmit)="onSave()">
+<div *ngIf="formClientForfait"></div>
+<form [formGroup]="formClientForfait" (ngSubmit)="onSave()">
   <div class="mb-3">
 
     <label for="nom" class="form-label">Nom</label>
@@ -19,5 +20,6 @@
     <input type="text" class="form-control" id="adresse" formControlName="adresse" >
 
   </div>
-  <button type="submit" class="btn btn-primary">Enregistrer</button>
+
+  <button type="submit" class="btn btn-primary">s'inscrire</button>
 </form>

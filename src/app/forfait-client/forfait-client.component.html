@@ -1,0 +1,27 @@
+<br><br>
+
+<table class="table tabClientForfait">
+  <thead>
+    <tr>
+      <th class="enteteTableClientForfait" scope="col">Pack</th>
+      <th class="enteteTableClientForfait" scope="col">Prix</th>
+      <th class="enteteTableClientForfait" scope="col">Contenu</th>
+      <th class="enteteTableClientForfait"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forfait of listeForfait$ | async">
+      <td class="tdClientForfait">{{forfait.nom}}</td>
+      <td class="tdClientForfait">{{forfait.montant}}€</td>
+      <td class="tdClientForfait">{{forfait.contenu}}</td>
+      <td class="tdClientForfait">
+        <div class="btn-group" role="group"
+							aria-label="Basic mixed styles example">
+							<button type="button"  class="btn btn-danger" (click)="inscription(forfait.id)" >S'inscrire</button>
+						</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>

@@ -1,25 +1,31 @@
 <p>formulaire-seance works!</p>
 
-<form [formGroup]="seanceForm" (ngSubmit)="onSave()">
-
-    <label for="dateSeance"> Date de la séance :  </label>
+<form (ngSubmit)="onSave()">
+  <form [formGroup]="seanceForm">
+    <label for="dateSeance"> Date de la séance : </label>
     <input type="date" id="dateSeance" formControlName="dateSeance">
     <br>
-    <label for="heureDebutSeance"> Heure de début de la séance :  </label>
+    <label for="heureDebutSeance"> Heure de début de la séance : </label>
     <input type="time" step="2" id="heureDebutSeance" formControlName="heureDebutSeance">
     <br>
-    <label for="heureFinSeance"> Heure de fin de la séance :  </label>
+    <label for="heureFinSeance"> Heure de fin de la séance : </label>
     <input type="time" step="2" id="heureFinSeance" formControlName="heureFinSeance">
     <br>
+  </form>
+  <form [formGroup]="otherForm">
     <label for="vehicule"> Vehicule : </label>
-    <select id="vehicule" formControlName="vehicule">  
-        <option *ngFor="let lv of listeVehicules$ | async">{{lv}}</option>  
-    </select>
+    <input type="number" id="vehicule" formControlName="vehicule" list="vehicules" />
+    <datalist id="vehicules">
+      <option *ngFor="let lv of listeVehicules$ | async">{{lv.id}}</option>
+    </datalist>
     <br>
-    <!-- <label for="formateur"> Formateur : </label>
-    <select id="formateur" formControlName="formateur">  
-        <option *ngFor="let lc of listeSeances$ | async">{{formateur.id}}</option>  
-    </select>  -->
-<br>
-    <input type="submit" value="Envoyer">
+    <label for="formateur"> Formateur : </label>
+    <input type="number" id="formateur" formControlName="formateur" list="formateurs" />
+    <datalist id="formateurs">
+      <option *ngFor="let lf of listeFormateurs$ | async">{{lf.id}}</option>
+    </datalist>
+    <br>
+  </form>
+  <br>
+  <input type="submit" value="Envoyer">
 </form>
