@@ -261,21 +261,26 @@ position: absolute;
     font-family: 'Just Another Hand', cursive;
     font-size: 50px;
     color: red;
+    margin-top: 5px;
+    margin-bottom: -4px;
+
 }
 
 .formateurs-image-text
 {
 display: flex;
 align-items: center;
-
-color:rgb(254, 127, 45);
+font-size: 30px;
+line-height: 30px ;
+color:rgb(0, 0, 0);
 margin-bottom: 4rem;
-max-width: 1300px;
+max-width: 1250px!important;
 margin-right: auto;
 margin-left: auto;
+position: relative;
+font-family: 'Just Another Hand', cursive;
 
 }
-
 
 .formateurs-image
 {
@@ -286,17 +291,39 @@ margin-left: auto;
 
 }
 
-div{
-   
-}
 .f-text
-{
+{   
+    position: relative;
+    z-index: 1;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right:4rem;
+    margin-left:4rem;
     padding-left: 6rem;
     padding-right: 6rem;
+    height: 200px;
+    align-items: center;
+    min-width: 670px;
+
+    
 }
+div
+
+
+.f-text:before {
+	content: "";
+    z-index: -2;  /*valeur negative pour forcer la couche à se mettre en dessous */
+	background-image: url("https://www.mpadeco.com/resize/500x500/zc/3/f/0/src/sites/mpadeco/files/products/27c4628687f9ad12062eb371055f8ee2.png");
+    border-radius: 20px 20px 20px 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+	opacity: 0.1;  
+    
+   
+}
+
 
 #antonio
 {
@@ -305,8 +332,10 @@ div{
 
 #stephane
 {
+
     margin-bottom: 1rem;
 }
+
 
 .nav{
  padding-top: 5px;
