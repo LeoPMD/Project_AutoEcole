@@ -15,7 +15,6 @@ import { VehiculeService } from '../service/vehicule.service';
   styleUrls: ['./formulaire-seance.component.css']
 })
 export class FormulaireSeanceComponent implements OnInit {
-
   seanceForm!: FormGroup
   otherForm!: FormGroup
   listeSeances$!: Observable<SeanceConduite[]>
@@ -25,6 +24,7 @@ export class FormulaireSeanceComponent implements OnInit {
   seancePreview$!:Observable<SeanceConduite>
 
   constructor(private formBuilder: FormBuilder, private router: Router, private seanceConduiteService: SeanceConduiteService, private vehiculeService: VehiculeService, private formateurService:FormateurService) { }
+
 
   ngOnInit(): void {
     this.listeSeances$=this.seanceConduiteService.getAllSeances()
@@ -40,7 +40,6 @@ export class FormulaireSeanceComponent implements OnInit {
         formateur:[null, [Validators.required]]
       })
   }
-
 
   onSave()
   {

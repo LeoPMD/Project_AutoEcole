@@ -180,12 +180,8 @@ position: absolute;
     to {left: 100%;}
 }
 
-div
-{
 
-}
-
-.pourquoi {
+.pourquoi{
     font-family: 'Just Another Hand', cursive;
     font-size: 290%;
     text-align: left;
@@ -389,6 +385,16 @@ padding-left: 1%;
 
 .navText{
   color: rgba(0,0,0,1)!important;
+}
+
+.enteteTableClientForfait{
+  background-color: #333 !important;
+  color: white;
+}
+
+.tabClientForfait{
+width: 50%;
+margin-left: 30%;
 }
 
 .bd-sidebar {
