@@ -28,6 +28,8 @@ import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 import { LoginComponent } from './login/login.component';
+import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
+
 
 
 
@@ -57,8 +59,8 @@ const routes: Routes = [
   {path: "forfaitClient", component: ForfaitClientComponent},
   {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
   {path:"menuadmin",component:MenuAdminComponent},
-  {path:"login",component:LoginComponent}
-
+  {path:"login",component:LoginComponent},
+  {path:"presentationVehicule", component: PresentationVehiculesComponent}
 
 ];
 

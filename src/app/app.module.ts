@@ -36,6 +36,8 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 import { LoginComponent } from './login/login.component';
+import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
+
 
 
 
@@ -74,7 +76,8 @@ import { LoginComponent } from './login/login.component';
     ForfaitClientComponent,
     FormulaireCLientForfaitComponent,
     MenuAdminComponent,
-    LoginComponent
+    LoginComponent,
+    PresentationVehiculesComponent
 
   ],
   imports: [
