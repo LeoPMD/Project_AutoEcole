@@ -115,7 +115,7 @@
                 <a class="nav-link navText" routerLink="/accueil" (click)="isAdmin = !isAdmin">Accueil</a>
               </li>
               <form class="d-flex">
-                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control">
+                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control" (click)="isAdmin = !isAdmin">
                   Déconnexion
                 </button>
               </form>
