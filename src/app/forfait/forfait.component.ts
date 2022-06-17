@@ -21,11 +21,6 @@ export class ForfaitComponent implements OnInit {
     this.listeForfait$ = this.forfaitService.getAllForfait()
   }
 
-  onSave()
-  {
-    this.router.navigateByUrl("/ajouterForfait")
-  }
-
   onDelete(id:number)
   {
     this.forfaitService.supprimerForfait(id).subscribe()

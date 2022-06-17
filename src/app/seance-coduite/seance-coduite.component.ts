@@ -19,4 +19,9 @@ export class SeanceCoduiteComponent implements OnInit {
     this.listeSeances$=this.seanceConduiteService.getAllSeances()
   }
 
+  onDelete(id:number)
+  {
+    this.seanceConduiteService.deleteSeance(id).subscribe()
+    this.router.navigate([this.router.url])
+  }
 }

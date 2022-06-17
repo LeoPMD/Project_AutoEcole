@@ -22,11 +22,6 @@ export class ClientComponent implements OnInit {
     this.listeClient$ = this.clientService.getAllClient()
   }
 
-  onSave()
-  {
-    this.router.navigateByUrl("/ajouterClient")
-  }
-
   onDelete(id:number)
   {
     this.clientService.supprimerClient(id).subscribe()

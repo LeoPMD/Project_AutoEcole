@@ -4,7 +4,7 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,11 +29,17 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
 import { ModifierForfaitComponent } from './modifier-forfait/modifier-forfait.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuizCodeComponent } from './quiz-code/quiz-code.component';
 import { ForfaitClientComponent } from './forfait-client/forfait-client.component';
 import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/formulaire-client-forfait.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
+import { LoginComponent } from './login/login.component';
+import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
+import { LogoutComponent } from './logout/logout.component';
+import { BasicAuthHttpInterceptorService } from './service/basic-auth-http-interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -60,13 +66,17 @@ import { PresentationFormateursComponent } from './presentation-formateurs/prese
     FormulaireForfaitComponent,
     ModifierForfaitComponent,
     AccueilComponent,
+    QuizCodeComponent,
 
     MenuAdminComponent,
     PresentationFormateursComponent,
 
     ForfaitClientComponent,
     FormulaireCLientForfaitComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    LoginComponent,
+    PresentationVehiculesComponent,
+    LogoutComponent
 
   ],
   imports: [
@@ -78,7 +88,7 @@ import { PresentationFormateursComponent } from './presentation-formateurs/prese
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:BasicAuthHttpInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
