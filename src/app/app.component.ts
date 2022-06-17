@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Project_AutoEcole';
   collapsed = true;
   isAdmin = false;
-  admin = false;
+  control = false;
 
 mySubscription;
 

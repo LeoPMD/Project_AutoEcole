@@ -45,12 +45,23 @@
                 <a class="nav-link active" aria-current="page" href="#">Contact</a>
               </li>
             </ul>
-            <button *ngIf="admin" class="btn btn-outline-success" (click)="isAdmin = !isAdmin"
-              routerLink="/menuadmin">Menu
-              Admin</button>
+            <button *ngIf="control; then Button; else NoButton"></button>
+            <ng-template #Button>
+            <button class="btn btn-outline-success" (click)="isAdmin = !isAdmin"
+              routerLink="/menuadmin">Menu Admin</button>
+            </ng-template>
+              <ng-template #NoButton>
+                <button hidden></button>
+              </ng-template>
             <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">Se connecter</button>
-            </form>
+              <button *ngIf="control; then Connecte; else PasConnecte"></button>
+              <ng-template #Connecte>
+                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control">Déconnexion</button>
+              </ng-template>
+              <ng-template #PasConnecte>
+                <button class="btn btn-outline-success" routerLink="/login" (click)="control = !control">Se connecter</button>
+              </ng-template>
+              </form>
           </div>
         </div>
       </nav>
@@ -106,7 +117,7 @@
                 <a class="nav-link navText" routerLink="/accueil" (click)="isAdmin = !isAdmin">Accueil</a>
               </li>
               <form class="d-flex">
-                <button class="btn btn-outline-success" type="submit">
+                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control" (click)="isAdmin = !isAdmin">
                   Déconnexion
                 </button>
               </form>
