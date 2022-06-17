@@ -29,6 +29,7 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 import { LoginComponent } from './login/login.component';
 import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -60,7 +61,8 @@ const routes: Routes = [
   {path: "formulaireClientForfait/:id", component: FormulaireCLientForfaitComponent},
   {path:"menuadmin",component:MenuAdminComponent},
   {path:"login",component:LoginComponent},
-  {path:"presentationVehicule", component: PresentationVehiculesComponent}
+  {path:"presentationVehicule", component: PresentationVehiculesComponent},
+  {path:"logout",component:LogoutComponent}
 
 ];
 
