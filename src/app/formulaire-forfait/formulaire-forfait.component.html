@@ -1,6 +1,6 @@
-<p>formulaire-forfait works!</p>
+<br>
 
-<div>
+<div class="formulaires ">
   <form [formGroup]="ForfaitForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="nom" class="form-label">Nom : </label>
@@ -15,7 +15,7 @@
       <input type="text" class="form-control" id="contenu" formControlName="contenu">
     </div>
     <div>
-      <input type="submit" class="form-control" value="Envoyer">
+      <button type="submit" class="btn btn-success btnform">Enregistrer</button>
     </div>
   </form>
 </div>

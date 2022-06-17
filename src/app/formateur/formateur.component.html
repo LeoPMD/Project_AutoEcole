@@ -1,5 +1,5 @@
-
-<div class="container">
+<br>
+<div class="container tablo">
   <table class="table">
     <thead>
       <tr>
@@ -9,6 +9,7 @@
         <th scope="col">Date de naissance</th>
         <th scope="col">Email</th>
         <th scope="col">Adresse</th>
+        <th>Modifier ou Supprimer</th>
       </tr>
     </thead>
     <tbody>
@@ -19,8 +20,8 @@
         <td>{{f.dateNaissance}}</td>
         <td>{{f.mail}}</td>
         <td>{{f.adresse}}</td>
-        <td><button type="button" class="btn btn-warning" (click)="onUpdate(f.id)">Update</button></td>
-        <td><button type="button" class="btn btn-danger" (click)="onDelete(f.id)">Delete</button></td>
+        <td><button type="button" class="btn btn-warning" (click)="onUpdate(f.id)">Modifier</button>  &nbsp; <button type="button" class="btn btn-danger" (click)="onDelete(f.id)">Supprimer</button></td>
+       
       </tr>
     </tbody>
   </table>

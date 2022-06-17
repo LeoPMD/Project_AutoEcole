@@ -1,6 +1,5 @@
-<p>seance-coduite works!</p>
-
-<table class="table">
+<br>
+<table class="table tablo container">
     <thead>
       <tr>
         <th scope="col">Id : </th>
@@ -10,7 +9,7 @@
         <th scope="col">Vehicule</th>
         <th scope="col">Client</th>
         <th scope="col">Formateur</th>
-        <th scope="col">Modifier/Supprimer</th>
+        <th scope="col">Modifier ou Supprimer</th>
       </tr>
     </thead>
     <tbody>
@@ -22,9 +21,10 @@
         <td>{{lc.vehicule.marque}}</td>
         <td>{{lc.client.nom}}</td>
         <td>{{lc.formateur.prenom}}</td>
-        <td><button>Modifier</button>
-            <button routeurLink="">Ajouter Formateur</button>
-           <button (click)="onDelete(lc.id)">Supprimer</button></td>
+
+        <td><button class="btn btn-warning">Modifier</button> &nbsp;
+           <button class="btn btn-danger">Supprimer</button></td>
+
       </tr>
     </tbody>
   </table>
