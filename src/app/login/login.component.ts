@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../service/login.service';
+import { AuthenticationServiceService } from '../service/authentication-service.service';
 
 @Component({
   selector: 'app-login',
@@ -10,22 +9,31 @@ import { LoginService } from '../service/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  LoginForm!:FormGroup
+  username = ''
+  password = ''
+  invalidLogin = false
 
-  constructor(private formBuilder:FormBuilder, private loginService:LoginService, private router:Router) { }
+  @Input() error!: string | null;
 
-  ngOnInit(): void {
-    this.LoginForm = this.formBuilder.group({
-      username: [null,[Validators.required]],
-      password: [null, [Validators.required]]
-    },
-    {
-      updateOn: "blur"
-    })
+  constructor(private router: Router,
+    private loginservice: AuthenticationServiceService) { }
+
+  ngOnInit() {
   }
 
-  onSubmit()
-  {
-    this.router.navigate(["/accueil"])
+  checkLogin() {
+    (this.loginservice.authenticate(this.username, this.password).subscribe(
+      data => {
+        this.router.navigate(['/accueil'])
+        this.invalidLogin = false
+      },
+      error => {
+        this.invalidLogin = true
+        this.error = error.message;
+
+      }
+    )
+    );
+
   }
 }
