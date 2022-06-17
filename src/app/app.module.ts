@@ -35,6 +35,7 @@ import { FormulaireCLientForfaitComponent } from './formulaire-client-forfait/fo
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
+import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -78,6 +79,7 @@ import { BasicAuthHttpInterceptorService } from './service/basic-auth-http-inter
     ForfaitClientComponent,
     FormulaireCLientForfaitComponent,
     MenuAdminComponent,
+    ContactComponent,
     LoginComponent,
     PresentationVehiculesComponent,
     LogoutComponent

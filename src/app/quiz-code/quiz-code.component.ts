@@ -19,10 +19,18 @@ export class QuizCodeComponent implements OnInit {
 
   constructor() {
     // loadQuiz();
+    
   }
 
   ngOnInit(): void {
     initData();
+
+    if (!localStorage.getItem('foo')) { 
+      localStorage.setItem('foo', 'no reload') 
+      location.reload() 
+    } else {
+      localStorage.removeItem('foo') 
+    }
     // loadQuiz();
     // deselectAnswers();
     // getSelected();

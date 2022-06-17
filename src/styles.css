@@ -680,6 +680,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display:flex;
 }
 
+.col-md-12 {
+  padding-top: 20px;
+}
+
+.gmap_canvas {
+  border-radius: 20px;
+}
+
 .wave
 {
     margin-bottom: -20%;
