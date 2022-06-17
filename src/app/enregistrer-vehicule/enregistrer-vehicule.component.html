@@ -1,17 +1,28 @@
-<p>enregistrer-vehicule works!</p>
+<br>
 
 <form [formGroup]="vehiculeEnr" (ngSubmit)="onSave()">
-    <label for="marque">Marque :</label>
+    <div class="mb-3 formulaires">
+
+    <label for="marque" class="form-label"> Marque : </label>
     <input type="text" id="marque" formControlName="marque">
-
-    <label for="plaqueImmatriculation">Plaque d'Immatriculation :</label>
+<br>
+    <label for="plaqueImmatriculation" class="form-label">Plaque d'Immatriculation :</label>
     <input type="text" id="plaqueImmatriculation" formControlName="plaqueImmatriculation">
+<br>
 
-    <label for="id">Boîte de vitesse (Manuelle/Automatique) :</label>
+    <label for="id" class="form-label">Boîte de vitesse (Manuelle/Automatique) :</label>
+
     <select name="boiteVitesse" id="boiteVitesse" formControlName="boiteVitesse">
         <option value="Manuelle">Manuelle</option>
         <option value="Automatique">Automatique</option>
     </select>
 
-    <input type="submit" value="Envoyer">
+
+    <button type="submit" class="btn btn-success btnform">Enregistrer</button>
+</div>
+<div class="test"><img src="https://www.pngplay.com/wp-content/uploads/7/Car-Transparent-Free-PNG.png" alt="voiture vert"  height="200"></div>
+<br>
+<br>
+<br><br><br>
+<div class="test1"><img src="http://pngimg.com/uploads/renault/renault_PNG47.png" alt="voiture vert"  height="200"></div>
 </form>

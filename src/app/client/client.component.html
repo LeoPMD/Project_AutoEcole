@@ -1,6 +1,6 @@
-<p>client works!</p>
+<br>
 
-<table class="table">
+<table class="table tablo container">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -9,7 +9,7 @@
       <th scope="col">Date de Naissance</th>
       <th scope="col">Adresse mail</th>
       <th scope="col">Adresse</th>
-      <th scope="col">Fonctionnalités</th>
+      <th>Modifier ou Supprimer</th>
     </tr>
   </thead>
   <tbody>
@@ -20,12 +20,10 @@
       <td>{{client.dateNaissance}}</td>
       <td>{{client.mail}}</td>
       <td>{{client.adresse}}</td>
-      <td>
-        <div class="btn-group" role="group"
-							aria-label="Basic mixed styles example">
+      <td>       
+        <button class="btn btn-warning" (click)="onUpdate(client.id)">Modifier</button> &nbsp;
 							<button class="btn btn-danger" (click)="onDelete(client.id)">Supprimer</button>
-							<button class="btn btn-warning" (click)="onUpdate(client.id)">Modifier</button>
-						</div>
+							
       </td>
     </tr>
   </tbody>

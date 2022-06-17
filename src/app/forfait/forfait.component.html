@@ -1,12 +1,12 @@
 
-<table class="table">
+<table class="table tablo container">
   <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Nom</th>
       <th scope="col">Prix</th>
       <th scope="col">Contenu</th>
-      <th scope="col">Fonctionnalités</th>
+      <th scope="col">Modifer ou Supprimer</th>
     </tr>
   </thead>
   <tbody>
@@ -16,10 +16,9 @@
       <td>{{forfait.montant}}€</td>
       <td>{{forfait.contenu}}</td>
       <td>
-        <div class="btn-group" role="group"
-							aria-label="Basic mixed styles example">
+        <div>	<button class="btn btn-warning" (click)="onUpdate(forfait.id)">Modifier</button> &nbsp;
 							<button class="btn btn-danger" (click)="onDelete(forfait.id)">Supprimer</button>
-							<button class="btn btn-warning" (click)="onUpdate(forfait.id)">Modifier</button>
+			
 						</div>
       </td>
     </tr>

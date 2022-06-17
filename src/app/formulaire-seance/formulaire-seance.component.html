@@ -1,36 +1,40 @@
-<p>formulaire-seance works!</p>
+<br>
 
+<div class="formulaires formform ">
 <form (ngSubmit)="onSave()">
   <form [formGroup]="seanceForm">
-    <label for="dateSeance"> Date de la séance : </label>
+    <label for="dateSeance"> Date de la séance</label> <br>
     <input type="date" id="dateSeance" formControlName="dateSeance">
-    <br>
-    <label for="heureDebutSeance"> Heure de début de la séance : </label>
+    <br> <br>
+
+    <label for="heureDebutSeance"> Heure de début de la séance</label> <br>
     <input type="time" step="2" id="heureDebutSeance" formControlName="heureDebutSeance">
-    <br>
-    <label for="heureFinSeance"> Heure de fin de la séance : </label>
+    <br> <br>
+    <label for="heureFinSeance"> Heure de fin de la séance</label> <br>
     <input type="time" step="2" id="heureFinSeance" formControlName="heureFinSeance">
-    <br>
+    <br> <br>
   </form>
   <form [formGroup]="otherForm">
-    <label for="vehicule"> Vehicule : </label>
+    <label for="vehicule"> Vehicule</label> <br>
     <input type="text" id="vehicule" formControlName="vehicule" list="vehicules" />
     <datalist id="vehicules">
       <option *ngFor="let lv of listeVehicules$ | async">{{lv.plaqueImmatriculation}}</option>
     </datalist>
-    <br>
-    <label for="formateur"> Formateur : </label>
+    <br><br>
+    <label for="formateur"> Formateur</label> <br>
     <input type="text" id="formateur" formControlName="formateur" list="formateurs" />
     <datalist id="formateurs">
       <option *ngFor="let lf of listeFormateurs$ | async">{{lf.nom}}</option>
     </datalist>
-    <br>
-    <label for="client"> Client : </label>
+    <br><br>
+    <label for="client"> Client</label> <br>
     <input type="text" id="client" formControlName="client" list="clients" />
     <datalist id="clients">
       <option *ngFor="let lc of listeClients$ | async">{{lc.nom}}</option>
     </datalist>
   </form>
   <br>
-  <input type="submit" value="Envoyer">
+  <button type="submit" class="btn btn-success">Enregistrer</button>
 </form>
+</div>
+<div class="centre "><img class="centre2" src="https://www.auto-ecole-fanget-peage-roussillon.fr/userfiles/9549/refonte/Cours-d%E2%80%99auto-%C3%A9cole-au-P%C3%A9age-de-Roussillon--Chavanay--avec-l%E2%80%99auto-%C3%A9cole-Fanget9.jpg" alt=""></div>

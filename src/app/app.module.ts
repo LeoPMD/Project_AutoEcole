@@ -4,7 +4,7 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +36,11 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationFormateursComponent } from './presentation-formateurs/presentation-formateurs.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { PresentationVehiculesComponent } from './presentation-vehicules/presentation-vehicules.component';
+import { LogoutComponent } from './logout/logout.component';
+import { BasicAuthHttpInterceptorService } from './service/basic-auth-http-interceptor.service';
+
 
 
 
@@ -74,7 +79,10 @@ import { ContactComponent } from './contact/contact.component';
     ForfaitClientComponent,
     FormulaireCLientForfaitComponent,
     MenuAdminComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    PresentationVehiculesComponent,
+    LogoutComponent
 
   ],
   imports: [
@@ -86,7 +94,7 @@ import { ContactComponent } from './contact/contact.component';
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:BasicAuthHttpInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

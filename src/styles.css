@@ -183,12 +183,27 @@ position: absolute;
     to {left: 100%;}
 }
 
+.test1 {
+
+    animation: spins 1000ms linear infinite, move1 5s linear infinite;
+    
+    position: absolute;
+    }
+    
+   
+    @keyframes move1 {
+        from {right: -200px;}
+        to {right:  100%;}
+    }
+
 .pourquoi{
     font-family: 'Just Another Hand', cursive;
     font-size: 290%;
     text-align: left;
     color: red;
-    margin-top: 10px
+    margin-top: 10px;
+    width: 390px;
+    
 
 }
 .Pourquoi
@@ -302,11 +317,7 @@ font-family: 'Just Another Hand', cursive;
     height: 200px;
     align-items: center;
     min-width: 670px;
-
-    
-}
-div
-
+ }
 
 .f-text:before {
 	content: "";
@@ -319,11 +330,50 @@ div
     bottom: 0px;
     left: 0px;
 	opacity: 0.1;  
-    
-   
+
 }
 
+.f-text:hover 
+{
+        transform: scale(1.1);
+      
+        transition: 0.3s all;
+   
+}
+.fondvoit
+{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    height: 200px;
+    align-items: center;
+    min-width: 350px;
+    
+}
 
+.fondvoit:before
+{
+    content: "";
+    z-index: -2;  /*valeur negative pour forcer la couche à se mettre en dessous */
+    background-color: orange;
+    opacity: .6;
+    border-radius: 20px 20px 20px 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.titrevoit
+{
+    color: white;
+    margin-top: 25px;
+}
 #antonio
 {
     margin-top: 1.5rem;
@@ -333,6 +383,11 @@ div
 {
 
     margin-bottom: 1rem;
+}
+
+.voitures
+{
+    width: 500px;
 }
 
 
@@ -379,7 +434,9 @@ div
   border-radius: 10px 10px 10px 10px;
   padding-top: 5px;
   width: 50rem;
-  margin-bottom: -10%;
+  min-width: 250px;
+  min-height: 150px;
+  margin-bottom: -7%;
   margin-left: -10%;
 }
 
@@ -392,8 +449,10 @@ div
     margin-right: 7%;
     border-radius: 10px 10px 10px 10px;
     padding-top: 5px;
+    min-width: 250px;
+    min-height: 150px;
     width: 50rem;
-    margin-bottom: -10%;
+    margin-bottom: -7%;
 
   }
 
@@ -425,6 +484,7 @@ margin-top: 120px !important;
   height: 400px;
   margin-top: 0px;
   padding-top: 10%;
+  margin-bottom: 30px;
 }
 
 .prix:hover{
@@ -462,8 +522,9 @@ padding-left: 1%;
   background-color: rgb(252, 202, 70, 0.9);
   color: rgb(0, 0, 0);
   margin-right: 7%;
-  margin-top: -10%;
-
+  margin-top: -15%;
+  min-width: 350px;
+  min-height: 150px;
   padding-right: 40px;
   border-radius:10px 10px 10px 10px;
 }
@@ -588,7 +649,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: rgba(254, 127, 45, 0.9);
+  background: linear-gradient(rgb(254, 127, 45, 1), rgba(254, 127, 45, 0.5));
   color: rgb(0, 0, 0);
   margin-right: 3.5%;
   margin-left: 3.5%;
@@ -600,11 +661,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding-left:10px;
   padding-right:10px;
   width: 50rem;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .flex1 {
   flex-basis: auto;
+  align-items: center;
 }
+
+.afficheListe:hover{
+    transform: scale(1.1);
+  
+    transition: 0.3s all;
+  }
 
 .bouton{
   display:flex;
@@ -616,4 +686,60 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .gmap_canvas {
   border-radius: 20px;
+}
+
+.wave
+{
+    margin-bottom: -20%;
+    opacity: 0.5;
+    z-index: -1;
+}
+.formulaires
+{   
+    position: relative;
+    max-height: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    z-index: 1;
+
+
+}
+.btnform
+{
+   margin-left:40%;
+   margin-right:60%;
+}
+.formform
+{
+  text-align: center;
+  margin: 0 auto;
+  width: 1400px;
+   
+}
+
+.form-label
+{
+    font-weight:bold ;
+}
+.centre 
+{
+  text-align: center;
+  margin: 0 auto;
+  width: 1400px;
+}
+.centre2
+{
+  align-items: center;
+max-width: 1400px;
+height: 300px;
+  margin-top: -5%;
+  z-index: -1;
+  opacity: 0.6
+}
+
+.tablo
+{
+  max-width: 1000px;
 }

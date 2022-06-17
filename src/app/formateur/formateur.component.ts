@@ -29,7 +29,7 @@ export class FormateurComponent implements OnInit {
   onDelete(id: number)
   {
     this.formateurService.deleteFormateur(id).subscribe()
-    this.router.navigateByUrl("/formateur")
+    this.router.navigate([this.router.url])
   }
 
 

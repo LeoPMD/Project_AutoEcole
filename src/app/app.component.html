@@ -29,15 +29,17 @@
                 Session de conduite
               </a>
               <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-                <a ngbDropdownItem routerLink="/addSeance" (click)="$event.preventDefault()">S'inscrire</a>
-                <a ngbDropdownItem routerLink="/presentationFormateur" (click)="$event.preventDefault()">Formateur</a>
-                <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Vehicule</a>
+
+                <a ngbDropdownItem routerLink="/addSeance" (click)="$event.preventDefault()">Reserver une séance</a>
+                <a ngbDropdownItem routerLink="/presentationFormateur" (click)="$event.preventDefault()">Les formateur</a>
+                <a ngbDropdownItem routerLink="/presentationVehicule" (click)="$event.preventDefault()">Nos véhicule</a>
+
               </div>
             </li>
           </ul>
         </div>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Stage de recupération du permis</a>
+              <a class="nav-link active" aria-current="page" href="https://www.permisapoints.fr/?gclid=CjwKCAjwqauVBhBGEiwAXOepkUHjzo4hkvuVNtRwIolvZrg5RrBtOCJQYQGK-VvjlzWfNbU0w1esBBoCqD0QAvD_BwE">Stage de recupération du permis</a>
             </li>
 
 
@@ -47,12 +49,23 @@
               <a class="nav-link navText" routerLink="/contact" >Contact</a>
             </li>
             </ul>
-            <button *ngIf="admin" class="btn btn-outline-success" (click)="isAdmin = !isAdmin"
-              routerLink="/menuadmin">Menu
-              Admin</button>
+            <button *ngIf="control; then Button; else NoButton"></button>
+            <ng-template #Button>
+            <button class="btn btn-outline-success" (click)="isAdmin = !isAdmin"
+              routerLink="/menuadmin">Menu Admin</button>
+            </ng-template>
+              <ng-template #NoButton>
+                <button hidden></button>
+              </ng-template>
             <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">Se connecter</button>
-            </form>
+              <button *ngIf="control; then Connecte; else PasConnecte"></button>
+              <ng-template #Connecte>
+                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control">Déconnexion</button>
+              </ng-template>
+              <ng-template #PasConnecte>
+                <button class="btn btn-outline-success" routerLink="/login" (click)="control = !control">Se connecter</button>
+              </ng-template>
+              </form>
           </div>
         </div>
       </nav>
@@ -80,6 +93,7 @@
                   <a ngbDropdownItem routerLink="/client" (click)="$event.preventDefault()">Elèves</a>
                   <a ngbDropdownItem routerLink="/vehicule" (click)="$event.preventDefault()">Voitures</a>
                   <a ngbDropdownItem routerLink="/CoursCode" (click)="$event.preventDefault()">Cours</a>
+                  <a ngbDropdownItem routerLink="/SeanceConduite" (click)="$event.preventDefault()">Séance</a>
                 </div>
               </li>
               <li class="nav-item dropdown" ngbDropdown>
@@ -91,6 +105,7 @@
                   <a ngbDropdownItem routerLink="/ajouterClient" (click)="$event.preventDefault()">Ajouter Elève</a>
                   <a ngbDropdownItem routerLink="/enrVehicule" (click)="$event.preventDefault()">Ajouter Voiture</a>
                   <a ngbDropdownItem routerLink="/addCours" (click)="$event.preventDefault()">Ajouter Cours</a>
+                  <a ngbDropdownItem routerLink="/addSeance" (click)="$event.preventDefault()">Ajouter Séance</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -106,7 +121,7 @@
                 <a class="nav-link navText" routerLink="/accueil" (click)="isAdmin = !isAdmin">Accueil</a>
               </li>
               <form class="d-flex">
-                <button class="btn btn-outline-success" type="submit">
+                <button class="btn btn-outline-success" routerLink="/logout" (click)="control = !control" (click)="isAdmin = !isAdmin">
                   Déconnexion
                 </button>
               </form>

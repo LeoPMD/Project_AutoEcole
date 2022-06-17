@@ -1,9 +1,13 @@
-<p>formulaire-cour works!</p>
+<br>
+<br>
+<form [formGroup]="coursForm" (ngSubmit)="onSave()" >
 
-<form [formGroup]="coursForm" (ngSubmit)="onSave()">
+    <label class="btnform" for="titre"> Titre: </label>
+    <input class="btnform" type="text" id="titre" formControlName="titre">
+<br><br>
+<button type="submit" class="btn btn-success btnform">Enregistrer</button>
 
-    <label for="titre"> Titre :  </label>
-    <input type="text" id="titre" formControlName="titre">
-
-    <input type="submit" value="Envoyer">
 </form>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="centre "><img class="centre2" src="https://www.auto-ecole-fanget-peage-roussillon.fr/userfiles/9549/refonte/Cours-d%E2%80%99auto-%C3%A9cole-au-P%C3%A9age-de-Roussillon--Chavanay--avec-l%E2%80%99auto-%C3%A9cole-Fanget9.jpg" alt=""></div>
+
